@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainDetailsPage"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_weight="6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <ImageView
+            android:id="@+id/imageView_One"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_014"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            tools:ignore="MissingConstraints" />
+
+        <!--    <com.example.androiddealercontrolbox.Fonts_icon.FontIconView-->
+        <!--        android:id="@+id/fontIconViewPage"-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:text="@string/Left"-->
+        <!--        android:textSize="40sp"-->
+        <!--        android:textStyle="bold"-->
+        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintHorizontal_bias="0.01"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toTopOf="parent"-->
+        <!--        app:layout_constraintVertical_bias="0.01"-->
+        <!--        tools:ignore="MissingConstraints" />-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="392dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/rectangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.095"
+            tools:ignore="MissingConstraints, RtlCompat">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/com_one"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/pingfangbold"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textSize="22sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="描述 / Describe :"
+                android:fontFamily="@font/pingfangbold"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView15"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:fontFamily="@font/pingfangbold"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:text="我花了两天时间找到了原因,  直接引用线上的,要在安卓下能正常显示要设置服务器允许跨域,或者将字体文件转出base64直接引入,希望能帮上忙,不要在入坑了"
+                android:textSize="19sp"
+                android:gravity="fill_vertical"
+                android:ellipsize="end"
+                android:maxLines="3"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView15"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:fontFamily="@font/pingfangbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="杯量建议/Cups Of Advice:"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView17"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pingfangbold"
+                android:text="大杯/Big"
+                android:textSize="19sp"
+                app:layout_constraintStart_toEndOf="@+id/textView16"
+                app:layout_constraintTop_toTopOf="@+id/textView16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pingfangbold"
+                android:text="饮用建议/Drinking Advice:"
+                android:textSize="19sp"
+                app:layout_constraintStart_toEndOf="@+id/textView18"
+                app:layout_constraintTop_toTopOf="@+id/textView16"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pingfangbold"
+                android:text="牛奶/Milk"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/textView19"
+                app:layout_constraintTop_toTopOf="@+id/textView16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                tools:ignore="HardcodedText" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/textView21"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="酸度 / Acidity :"-->
+<!--                android:textSize="19sp"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/textView20"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/textView16"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                android:layout_marginBottom="10dp"/>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/textViewPage"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="8"-->
+<!--                android:textSize="19sp"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/textView21"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/textView16"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                android:layout_marginBottom="10dp" />-->
+
+            <!--        <com.example.androiddealercontrolbox.Fonts_icon.FontIconView-->
+            <!--            android:id="@+id/fontIconView3"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:text="@string/money"-->
+            <!--            android:textColor="@color/light_red"-->
+            <!--            android:textSize="25sp"-->
+            <!--            app:layout_constraintStart_toStartOf="parent"-->
+            <!--            app:layout_constraintTop_toBottomOf="@+id/textView16"-->
+            <!--            android:layout_marginTop="20dp"-->
+            <!--            android:layout_marginStart="20dp"/>-->
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView23"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="详情信息"-->
+<!--        android:textColor="@android:color/black"-->
+<!--        android:textSize="22sp"-->
+<!--        android:elevation="3dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/container"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:layout_marginStart="30dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView24"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="详情信息放一些图文信息"-->
+<!--        android:textSize="19sp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView23"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_marginStart="60dp"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutThree"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:layout_marginTop="10dp"
+        tools:ignore="MissingConstraints, RtlCompat">
+
+<!--        <View-->
+<!--            android:background="@drawable/rectangle10"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1sp"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/textViewFive"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            tools:ignore="MissingConstraints,SmallSp" />-->
+
+        <View
+            android:background="@drawable/rectangle10"
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewFive"
+            app:layout_constraintBottom_toBottomOf="@+id/viewFive"
+            tools:ignore="MissingConstraints,SmallSp" />
+
+        <View
+            android:id="@+id/viewFive"
+            android:layout_width="180dp"
+            android:layout_height="70dp"
+            android:background="@drawable/rectangle8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textViewFive"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:text="@string/OrderClose"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/pingfangbold"
+            android:textSize="22sp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            app:layout_constraintStart_toStartOf="@id/viewFive"
+            app:layout_constraintBottom_toBottomOf="@+id/viewFive"
+            app:layout_constraintEnd_toEndOf="@+id/viewFive"
+            app:layout_constraintTop_toTopOf="@id/viewFive"
+            tools:ignore="MissingConstraints" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/viewFive"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/imageViewOne"
+                android:src="@drawable/img_009"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textViewNameOne"
+                android:text="我花了两天时间找到了原因,  直接引用线上的,要在安卓下能正常显示要设置服务器允许跨域,或者将字体文件转出base64直接引入,希望能帮上忙,不要在入坑了"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:fontFamily="@font/pingfangbold"
+                android:ellipsize="end"
+                android:maxLines="3"
+                app:layout_constraintStart_toEndOf="@+id/imageViewOne"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textViewChans"
+                android:textColor="@color/light_red"
+                android:textSize="20sp"
+                android:text="1 通道"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/imageViewOne"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                tools:ignore="MissingConstraints" />
+
+            <com.example.myapplication.FontIconView.FontIconView
+                android:id="@+id/fontIconViewStop"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Check_Stop"
+                android:textSize="42sp"
+                android:textColor="@color/light_black_salt"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="50dp"
+                android:layout_marginTop="15dp"
+                tools:ignore="MissingConstraints" />
+
+
+            <ProgressBar
+                android:id="@+id/progressBarOne"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                style="@android:style/Widget.ProgressBar.Inverse"
+                android:layout_marginEnd="50dp"
+                android:layout_marginTop="15dp"
+                tools:ignore="MissingConstraints" />
+
+            <com.example.myapplication.FontIconView.FontIconView
+                android:id="@+id/fontIconViewMark"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Check_mark"
+                android:textSize="42sp"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="50dp"
+                android:layout_marginTop="15dp"
+                tools:ignore="MissingConstraints" />
+
+            <com.example.myapplication.FontIconView.FontIconView
+                android:id="@+id/fontIconViewFork"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Check_fork"
+                android:textSize="42sp"
+                android:textColor="@color/light_red"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="50dp"
+                android:layout_marginTop="15dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/textViewShipMentOne"
+                android:text="等待出货  Wait"
+                android:fontFamily="@font/pingfangbold"
+                android:textSize="21sp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:gravity="center"
+                android:textColor="@color/light_smoke"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/textViewShipMent"
+                android:text="正在出货"
+                android:textSize="21sp"
+                android:textColor="@color/light_smoke"
+                android:layout_width="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/textViewShipMentMark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="出货成功"
+                android:textSize="22sp"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="10dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/textViewShipMentFork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="出货失败"
+                android:textSize="22sp"
+                android:textColor="@color/light_red"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="10dp"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="400dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/rectangle14"
+            android:fontFamily="@font/pingfangbold"
+            android:text="返 回 / Return"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="?android:attr/borderlessButtonStyle"
+            tools:ignore="MissingConstraints"/>
+
+        <Button
+            android:id="@+id/buttonPlay"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="@font/pingfangbold"
+            android:background="@drawable/rectangle14"
+            android:text="立即出货/Release"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            style="?android:attr/borderlessButtonStyle"
+            tools:ignore="MissingConstraints"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="app_name_One">Cafewalk</string>
+    <string name="app_name">My Application</string>
+    <string name="Group">组合优惠</string>
+    <string name="com_list">商品列表 / Product List</string>
+    <string name="price_agg">总计  :</string>
+    <string name="money_eng">￥</string>
+    <string name="com_one">香草冰激凌风味</string>
+    <string name="ProName">焦糖风味家用款胶囊</string>
+    <string name="Like">日常喜好  Like Most</string>
+    <string name="OrderClose"> 订单详情 \n Order Reference</string>
+
+    <string name="UserName">UserName :</string>
+    <string name="CardID">CardID :</string>
+
+    <string name="shopping_cart">&#xe638;</string>
+    <string name="Check_mark">&#xe65c;</string>
+    <string name="Check_fork">&#xe63a;</string>
+    <string name="Check_Stop">&#xe67a;</string>
+    <string name="Check_Top">&#xe62b;</string>
+</resources>

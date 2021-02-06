@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relatvelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainInterFace">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutOne"
+        android:background="@color/light_Dark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+<!--        <FrameLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="80dp">-->
+
+<!--            <androidx.viewpager.widget.ViewPager-->
+<!--                android:id="@+id/viewPager"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"/>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/linearLayout_points"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_gravity="bottom"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                tools:ignore="MissingConstraints" />-->
+
+<!--            &lt;!&ndash;            <ImageView&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:id="@+id/imageViewAdv"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_height="260dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:scaleType="centerCrop"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:src="@drawable/img_012" />&ndash;&gt;-->
+
+<!--        </FrameLayout>-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            tools:ignore="MissingConstraints,RtlCompat">
+
+            <ImageView
+                android:id="@+id/microsoftImage"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/microsoft"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="15dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/microsoftTextHi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pingfangbold"
+                app:layout_constraintStart_toEndOf="@+id/microsoftImage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="Microsoft"
+                android:textStyle="bold"
+                android:textColor="@color/light_smoke"
+                android:textSize="30sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <ImageView
+                android:id="@+id/imageSon"
+                android:src="@drawable/img_31"
+                app:layout_constraintStart_toEndOf="@+id/microsoftTextHi"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="100dp"
+                android:layout_width="80dp"
+                android:layout_height="60dp"/>
+
+            <TextView
+                android:id="@+id/microsoftCardId"
+                android:text="HI"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:fontFamily="@font/pingfangbold"
+                app:layout_constraintStart_toEndOf="@+id/imageSon"
+                app:layout_constraintTop_toTopOf="@+id/imageSon"
+                app:layout_constraintBottom_toBottomOf="@+id/imageSon"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="0dp"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/microsoftCard"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:fontFamily="@font/pingfangbold"
+                android:text="Leo Ma"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/microsoftCardId"
+                app:layout_constraintTop_toTopOf="@+id/microsoftCardId"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/light_smoke"
+                android:textSize="20sp"
+                android:layout_marginStart="5dp"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/textName"
+                android:text="Name:"
+                android:gravity="right"
+                android:textSize="20sp"
+                android:visibility="gone"
+                android:fontFamily="@font/pingfangbold"
+                app:layout_constraintStart_toEndOf="@+id/imageSon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_width="65dp"
+                android:layout_height="30dp"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/microsoftUserName"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:fontFamily="@font/pingfangbold"
+                android:text="Leo Ma"
+                android:ellipsize="end"
+                android:maxLines="1"
+                app:layout_constraintStart_toEndOf="@+id/microsoftCardId"
+                app:layout_constraintTop_toTopOf="@+id/microsoftCardId"
+                app:layout_constraintBottom_toBottomOf="@+id/microsoftCardId"
+                android:textColor="@color/light_smoke"
+                android:textSize="25sp"
+                tools:ignore="HardcodedText,UnusedAttribute" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/microsoftTextCardId"-->
+<!--                android:layout_width="110dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/microsoftImage"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/microsoftTextUserName"-->
+<!--                android:text="@string/CardID"-->
+<!--                android:textColor="@color/light_smoke"-->
+<!--                android:textSize="20sp"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/microsoftTextCardId"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/microsoftTextCardId"-->
+<!--                android:text="1964287 "-->
+<!--                android:textColor="@color/light_smoke"-->
+<!--                android:textSize="20sp"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                />-->
+
+            <TextView
+                android:id="@+id/TextGreetings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/microsoftUserName"
+                android:fontFamily="@font/pingfangbold"
+                android:textColor="@color/light_smoke"
+                android:textSize="25sp"
+                android:layout_marginStart="20dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_Dark">
+
+            <TextView
+                android:id="@+id/textWhiteOne"
+                android:layout_width="250dp"
+                android:layout_height="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:background="@android:color/white"
+                tools:ignore="MissingConstraints,RtlCompat" />
+
+            <TextView
+                android:id="@+id/textCafeOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择咖啡胶囊"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:fontFamily="@font/pingfangbold"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textWhiteOne"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                tools:ignore="MissingConstraints,RtlCompat" />
+
+            <TextView
+                android:id="@+id/textCafeTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Make Your Capsule Choice"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:fontFamily="@font/pingfangbold"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/textWhiteTwo"
+                app:layout_constraintTop_toBottomOf="@+id/textCafeOne"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                tools:ignore="MissingConstraints,RtlCompat" />
+
+            <TextView
+                android:id="@+id/textWhiteTwo"
+                android:layout_width="200dp"
+                android:layout_height="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textCafeOne"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                tools:ignore="MissingConstraints,RtlCompat" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:background="@color/light_Dark"
+            android:id="@+id/recyclerView_interFace1"/>
+
+
+    </LinearLayout>
+
+    <!--    <com.lihang.ShadowLayout-->
+    <!--        android:id="@+id/shadowLayout"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:hl_cornerRadius="30dp"-->
+    <!--        app:hl_dy="0dp"-->
+    <!--        app:hl_shadowLimit="4dp"-->
+    <!--        app:hl_shadowColor="#2a000000"-->
+    <!--        >-->
+
+<!--    <View-->
+<!--        android:id="@+id/viewShopping"-->
+<!--        android:visibility="visible"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:background="@color/light_Dark"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        />-->
+
+
+    <!--    </com.lihang.ShadowLayout>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:src="@drawable/img_30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

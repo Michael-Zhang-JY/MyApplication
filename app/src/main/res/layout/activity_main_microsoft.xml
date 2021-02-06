@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainMicrosoft">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            >
+
+            <ImageView
+                android:id="@+id/imageMicrosoft"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/microsoft"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.33"
+                android:layout_marginTop="15dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/imageMicrosoft"
+                app:layout_constraintTop_toTopOf="@+id/imageMicrosoft"
+                app:layout_constraintBottom_toBottomOf="@+id/imageMicrosoft"
+                android:text="Microsoft"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/pingfangbold"
+                tools:ignore="HardcodedText,MissingConstraints,UnusedAttribute" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_smoke"
+            >
+
+            <Button
+                android:id="@+id/buttonReturn"
+                android:layout_width="400dp"
+                android:layout_height="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rectangle15"
+                android:text="返 回 / Return"
+                android:fontFamily="@font/pingfangbold"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:textAllCaps="false"
+                style="?android:attr/borderlessButtonStyle"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/XrtextViewMicrosoft"
+                android:text="请访问aka.ms/refsmart 完善卡号信息"
+                android:layout_width="450dp"
+                android:layout_height="110dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="30sp"
+                app:layout_constraintVertical_bias="0.4"
+                android:fontFamily="@font/pingfangbold"
+                android:textColor="@android:color/white"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:text="Please visit aka.ms/refsmart to complete the badge number information"
+                android:layout_width="450dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/XrtextViewMicrosoft"
+                android:textSize="30sp"
+                android:fontFamily="@font/pingfangbold"
+                android:textColor="@android:color/white"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

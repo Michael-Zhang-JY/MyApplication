@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="light_pink">#FA8072</color>
+    <color name="light_tange">#FF8247</color>
+    <color name="light_black_salt">#828282</color>
+    <color name="light_red">#FF0000</color>
+    <color name="light_gray">#DCDCDC</color>
+    <color name="light_smoke">#696969</color>
+    <color name="light_Dark">#363636</color>
+    <color name="light_pinkOne">#EA5514</color>
+</resources>

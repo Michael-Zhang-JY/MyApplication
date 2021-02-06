@@ -1,0 +1,779 @@
+02-01 10:01:07.679   225   225 D RILD    : **RIL Daemon Started**
+02-01 10:01:07.679   225   225 D RILD    : **RILd param count=6**
+02-01 10:01:07.679   225   225 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:01:12.512   528   528 D RILD    : **RIL Daemon Started**
+02-01 10:01:12.512   528   528 D RILD    : **RILd param count=6**
+02-01 10:01:12.512   528   528 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:01:17.568   535   535 D RILD    : **RIL Daemon Started**
+02-01 10:01:17.568   535   535 D RILD    : **RILd param count=6**
+02-01 10:01:17.568   535   535 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:01:22.031   539   539 D RILD    : **RIL Daemon Started**
+02-01 10:01:22.032   539   539 D RILD    : **RILd param count=6**
+02-01 10:01:22.032   539   539 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:01:27.087   545   545 D RILD    : **RIL Daemon Started**
+02-01 10:01:27.087   545   545 D RILD    : **RILd param count=6**
+02-01 10:01:27.087   545   545 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:01:32.144   553   553 D RILD    : **RIL Daemon Started**
+02-01 10:01:32.144   553   553 D RILD    : **RILd param count=6**
+02-01 10:01:32.144   553   553 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:01:36.141   228   228 D TelephonyManager: No /proc/cmdline exception=java.io.FileNotFoundException: /proc/cmdline (Permission denied)
+02-01 10:01:36.141   228   228 D TelephonyManager: /proc/cmdline=
+02-01 10:01:37.199   577   577 D RILD    : **RIL Daemon Started**
+02-01 10:01:37.199   577   577 D RILD    : **RILd param count=6**
+02-01 10:01:37.199   577   577 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:01:42.299   583   583 D RILD    : **RIL Daemon Started**
+02-01 10:01:42.299   583   583 D RILD    : **RILd param count=6**
+02-01 10:01:42.300   583   583 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:01:47.310   655   655 D RILD    : **RIL Daemon Started**
+02-01 10:01:47.310   655   655 D RILD    : **RILd param count=6**
+02-01 10:01:47.310   655   655 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:01:52.364   674   674 D RILD    : **RIL Daemon Started**
+02-01 10:01:52.364   674   674 D RILD    : **RILd param count=6**
+02-01 10:01:52.365   674   674 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:01:57.423   725   725 D RILD    : **RIL Daemon Started**
+02-01 10:01:57.423   725   725 D RILD    : **RILd param count=6**
+02-01 10:01:57.424   725   725 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:02:02.481   751   751 D RILD    : **RIL Daemon Started**
+02-01 10:02:02.481   751   751 D RILD    : **RILd param count=6**
+02-01 10:02:02.481   751   751 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:02:07.151   877   877 D RILD    : **RIL Daemon Started**
+02-01 10:02:07.151   877   877 D RILD    : **RILd param count=6**
+02-01 10:02:07.151   877   877 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:02:12.569  1042  1042 D RILD    : **RIL Daemon Started**
+02-01 10:02:12.569  1042  1042 D RILD    : **RILd param count=6**
+02-01 10:02:12.569  1042  1042 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:02:13.043   561   597 D TelephonyRegistry: listen oscl: hasNotifySubscriptionInfoChangedOccurred==false no callback
+02-01 10:02:13.087   561   561 W CarrierConfigManager: Error getting config for subId -1 ICarrierConfigLoader is null
+02-01 10:02:13.642   561   599 D TelephonyRegistry: listen oscl: hasNotifySubscriptionInfoChangedOccurred==false no callback
+02-01 10:02:13.672   561   600 D TelephonyRegistry: systemRunning register for intents
+02-01 10:02:14.193   561   597 D TelephonyRegistry: listen oscl: hasNotifySubscriptionInfoChangedOccurred==false no callback
+02-01 10:02:14.389  1058  1058 D TDC     : updateOrInsert: inserting: Modem { uuid=modem, state=0, rilModel=0, rat={}, maxActiveVoiceCall=1, maxActiveDataCall=1, maxStandby=1 }
+02-01 10:02:14.389  1058  1058 D TDC     : updateOrInsert: inserting: Sim { uuid=sim, modemUuid=modem, state=0 }
+02-01 10:02:14.393  1058  1058 D CdmaSSM : subscriptionSource from settings: 0
+02-01 10:02:14.393  1058  1058 I PhoneFactory: Cdma Subscription set to 0
+02-01 10:02:14.403  1058  1058 I PhoneFactory: Network Mode set to 9
+02-01 10:02:14.406  1058  1058 D RILJ    : RIL(context, preferredNetworkType=9 cdmaSubscription=0)
+02-01 10:02:14.408  1070  1363 D TelephonyManager: getSimState: default sim:-1, sim state for slotIdx=0 is 0, return state as unknown
+02-01 10:02:14.411  1058  1058 D RILJ    : Starting RILReceiver0 [SUB0]
+02-01 10:02:14.414  1058  1058 D RILJ    : [3648]> GET_HARDWARE_CONFIG [SUB0]
+02-01 10:02:14.416  1058  1058 D RilRequest: [3648]< GET_HARDWARE_CONFIG error: com.android.internal.telephony.CommandException: RADIO_NOT_AVAILABLE ret=
+02-01 10:02:14.416  1058  1058 I PhoneFactory: Creating SubscriptionController
+02-01 10:02:14.422  1058  1382 I RILJ    : Couldn't find 'rild' socket; retrying after timeout
+02-01 10:02:14.424  1058  1058 D SubscriptionController: [SubscriptionController] init by Context
+02-01 10:02:14.425  1058  1058 D UiccController: Creating UiccController
+02-01 10:02:14.427  1058  1058 D TelephonyTester: register for intent action=com.android.internal.telephony.action_detached
+02-01 10:02:14.427  1058  1058 D TelephonyTester: register for intent action=com.android.internal.telephony.action_attached
+02-01 10:02:14.430  1058  1058 D Phone   : mDoesRilSendMultipleCallRing=true
+02-01 10:02:14.430  1058  1058 D Phone   : mCallRingDelay=3000
+02-01 10:02:14.436  1058  1058 D RILJ    : [3649]> RIL_REQUEST_START_LCE [SUB0]
+02-01 10:02:14.436  1058  1058 D RilRequest: [3649]< RIL_REQUEST_START_LCE error: com.android.internal.telephony.CommandException: RADIO_NOT_AVAILABLE ret=
+02-01 10:02:14.442  1058  1058 E RIL_ImsSms: getFormat should never be called from here!
+02-01 10:02:14.442  1058  1058 D SMSDispatcher: SMSDispatcher: ctor mSmsCapable=false format=unknown mSmsSendDisabled=true
+02-01 10:02:14.442  1058  1058 D RIL_ImsSms: ImsSMSDispatcher created
+02-01 10:02:14.454  1058  1058 D SMSDispatcher: SMSDispatcher: ctor mSmsCapable=false format=3gpp2 mSmsSendDisabled=true
+02-01 10:02:14.454  1058  1058 D CdmaSMSDispatcher: CdmaSMSDispatcher created
+02-01 10:02:14.465  1058  1058 D GsmInboundSmsHandler: created InboundSmsHandler
+02-01 10:02:14.484  1058  1058 D CdmaInboundSmsHandler: created InboundSmsHandler
+02-01 10:02:14.498  1058  1058 D SMSDispatcher: SMSDispatcher: ctor mSmsCapable=false format=3gpp mSmsSendDisabled=true
+02-01 10:02:14.498  1058  1058 D GsmSMSDispatcher: GsmSMSDispatcher created
+02-01 10:02:14.502  1058  1392 D GsmInboundSmsHandler: StartupState.processMessage:6
+02-01 10:02:14.502  1058  1392 D GsmInboundSmsHandler: entering Idle state
+02-01 10:02:14.502  1058  1401 D CdmaInboundSmsHandler: StartupState.processMessage:6
+02-01 10:02:14.502  1058  1401 D CdmaInboundSmsHandler: entering Idle state
+02-01 10:02:14.504  1058  1058 D IccCardProxy: ctor: ci=com.android.internal.telephony.RIL@9985583 phoneId=0
+02-01 10:02:14.504  1058  1058 D CdmaSSM : subscriptionSource from settings: 0
+02-01 10:02:14.504  1058  1058 D CdmaSSM : cdmaSSM constructor: 0
+02-01 10:02:14.504  1058  1058 D IccCardProxy: update icc_operator_numeric=
+02-01 10:02:14.504  1058  1058 D TelephonyManager: setTelephonyProperty: success phoneId=0 property=gsm.sim.operator.numeric value:  propVal=
+02-01 10:02:14.506  1058  1058 D TelephonyManager: setTelephonyProperty: success phoneId=0 property=gsm.sim.operator.iso-country value:  propVal=
+02-01 10:02:14.506  1058  1058 D TelephonyManager: setTelephonyProperty: success phoneId=0 property=gsm.sim.operator.alpha value:  propVal=
+02-01 10:02:14.508  1058  1058 E IccCardProxy: setExternalState: set mPhoneId=0 mExternalState=NOT_READY
+02-01 10:02:14.508  1058  1058 D TelephonyManager: setTelephonyProperty: success phoneId=0 property=gsm.sim.state value: NOT_READY propVal=NOT_READY
+02-01 10:02:14.512  1058  1058 D IccCardProxy: broadcastIccStateChangedIntent intent ACTION_SIM_STATE_CHANGED value=NOT_READY reason=null for mPhoneId=0
+02-01 10:02:14.514  1058  1058 D RILJ    : setPhoneType=1 old value=0 [SUB0]
+02-01 10:02:14.515  1058  1058 D TelephonyManager: setTelephonyProperty: success phoneId=0 property=gsm.current.phone-type value: 1 propVal=1
+02-01 10:02:14.516  1058  1058 D IccCardProxy: Setting radio tech UMTS
+02-01 10:02:14.516  1058  1058 D IccCardProxy: updateQuietMode: 3GPP subscription -> newQuietMode=false
+02-01 10:02:14.516  1058  1058 D IccCardProxy: updateQuietMode: no changes don't setExternalState
+02-01 10:02:14.516  1058  1058 D IccCardProxy: updateQuietMode: QuietMode is false (app_type=1 cdmaSource=-1)
+02-01 10:02:14.529  1058  1058 W CarrierConfigManager: Error getting config for subId -1 ICarrierConfigLoader is null
+02-01 10:02:14.530   561  1272 D TelephonyRegistry: listen oscl: hasNotifySubscriptionInfoChangedOccurred==false no callback
+02-01 10:02:14.545  1058  1058 D TelephonyManager: setTelephonyProperty: success phoneId=0 property=gsm.network.type value: Unknown propVal=Unknown
+02-01 10:02:14.546  1058  1058 D RILJ    : [3650]> SIGNAL_STRENGTH [SUB0]
+02-01 10:02:14.546  1058  1058 D RilRequest: [3650]< SIGNAL_STRENGTH error: com.android.internal.telephony.CommandException: RADIO_NOT_AVAILABLE ret=
+02-01 10:02:14.546  1058  1058 D SST     : notifyDataRegStateRilRadioTechnologyChanged: drs=1 rat=0
+02-01 10:02:14.546  1058  1058 D TelephonyManager: setTelephonyProperty: success phoneId=0 property=gsm.network.type value: Unknown propVal=Unknown
+02-01 10:02:14.551  1058  1058 D DCT     : [0]DCT.constructor
+02-01 10:02:14.555   561   598 D TelephonyRegistry: listen oscl: hasNotifySubscriptionInfoChangedOccurred==false no callback
+02-01 10:02:14.563  1058  1058 D Dcc     : E ctor
+02-01 10:02:14.563  1058  1058 D Dcc     : X ctor
+02-01 10:02:14.564  1058  1058 D SubscriptionController: [getPhoneId] asked for default subId=-1
+02-01 10:02:14.567  1058  1408 D DcTesterDeacativateAll: register for intent action=com.android.internal.telephony.dataconnection.action_deactivate_all
+02-01 10:02:14.567  1058  1408 D DcTesterDeacativateAll: register for intent action=com.android.internal.telephony.action_detached
+02-01 10:02:14.570  1058  1058 D DcTesterFailBrinupAll: register for intent action=com.android.internal.telephony.dataconnection.action_fail_bringup
+02-01 10:02:14.570  1058  1075 D SubscriptionController: [getActiveSubInfoList] Sub Controller not ready
+02-01 10:02:14.570  1058  1058 D DcTesterFailBrinupAll: register for intent action=com.android.internal.telephony.action_detached
+02-01 10:02:14.570  1058  1058 D DcTesterFailBrinupAll: register for intent action=com.android.internal.telephony.action_attached
+02-01 10:02:14.577  1058  1058 D SST     : notifyDataRegStateRilRadioTechnologyChanged: drs=1 rat=0
+02-01 10:02:14.577  1058  1058 D TelephonyManager: setTelephonyProperty: success phoneId=0 property=gsm.network.type value: Unknown propVal=Unknown
+02-01 10:02:14.578  1058  1058 D DCT     : [0]update sub = -2
+02-01 10:02:14.578  1058  1058 D DCT     : [0]update(): Active DDS, register for all events now!
+02-01 10:02:14.578  1058  1058 D GsmCdmaPhone: [GsmCdmaPhone] updateCurrentCarrierInProvider: mSubId = -2 currentDds = -1 operatorNumeric = null
+02-01 10:02:14.584  1058  1058 D DCT     : [0]initApnContexts: E
+02-01 10:02:14.584  1058  1058 D DCT     : [0]initApnContexts: skipping unknown type=1
+02-01 10:02:14.585  1058  1058 D DCT     : [0]initApnContexts: apnContext={mApnType=default mState=IDLE mWaitingApns={null} mApnSetting={null} mReason=dataEnabled mDataEnabled=false mDependencyMet=true}
+02-01 10:02:14.585  1058  1058 D DCT     : [0]initApnContexts: apnContext={mApnType=mms mState=IDLE mWaitingApns={null} mApnSetting={null} mReason=dataEnabled mDataEnabled=false mDependencyMet=false}
+02-01 10:02:14.585  1058  1058 D DCT     : [0]initApnContexts: apnContext={mApnType=supl mState=IDLE mWaitingApns={null} mApnSetting={null} mReason=dataEnabled mDataEnabled=false mDependencyMet=true}
+02-01 10:02:14.585  1058  1058 D DCT     : [0]initApnContexts: apnContext={mApnType=dun mState=IDLE mWaitingApns={null} mApnSetting={null} mReason=dataEnabled mDataEnabled=false mDependencyMet=true}
+02-01 10:02:14.585  1058  1058 D DCT     : [0]initApnContexts: apnContext={mApnType=hipri mState=IDLE mWaitingApns={null} mApnSetting={null} mReason=dataEnabled mDataEnabled=false mDependencyMet=true}
+02-01 10:02:14.585  1058  1058 D DCT     : [0]initApnContexts: apnContext={mApnType=fota mState=IDLE mWaitingApns={null} mApnSetting={null} mReason=dataEnabled mDataEnabled=false mDependencyMet=true}
+02-01 10:02:14.585  1058  1058 D DCT     : [0]initApnContexts: apnContext={mApnType=ims mState=IDLE mWaitingApns={null} mApnSetting={null} mReason=dataEnabled mDataEnabled=false mDependencyMet=true}
+02-01 10:02:14.586  1058  1058 D DCT     : [0]initApnContexts: apnContext={mApnType=cbs mState=IDLE mWaitingApns={null} mApnSetting={null} mReason=dataEnabled mDataEnabled=false mDependencyMet=true}
+02-01 10:02:14.586  1058  1058 D DCT     : [0]initApnContexts: skipping unknown type=7
+02-01 10:02:14.586  1058  1058 D DCT     : [0]initApnContexts: skipping unknown type=9
+02-01 10:02:14.586  1058  1058 D DCT     : [0]initApnContexts: apnContext={mApnType=emergency mState=IDLE mWaitingApns={null} mApnSetting={null} mReason=dataEnabled mDataEnabled=false mDependencyMet=true}
+02-01 10:02:14.609  1058  1058 D GsmCdmaPhone: [GsmCdmaPhone] GsmCdmaPhone: constructor: sub = 0
+02-01 10:02:14.609  1058  1058 I PhoneFactory: Creating Phone with type = 1 sub = 0
+02-01 10:02:14.610  1058  1058 I PhoneFactory: defaultSmsApplication: NONE
+02-01 10:02:14.615  1058  1058 I PhoneFactory: Creating SubInfoRecordUpdater 
+02-01 10:02:14.616  1058  1058 D SubscriptionInfoUpdater: Constructor invoked
+02-01 10:02:14.696   561   597 D TelephonyRegistry: listen oscl: hasNotifySubscriptionInfoChangedOccurred==false no callback
+02-01 10:02:14.698   561   597 D TelephonyRegistry: listen oscl: hasNotifySubscriptionInfoChangedOccurred==false no callback
+02-01 10:02:14.703  1058  1058 D PhoneSwitcher: PhoneSwitcher started
+02-01 10:02:14.703  1058  1058 D ProxyController: Constructor - Enter
+02-01 10:02:14.710  1058  1058 D ProxyController: clearTransaction
+02-01 10:02:14.710  1058  1058 D ProxyController: clearTransaction: phoneId=0 status=IDLE
+02-01 10:02:14.710  1058  1058 D ProxyController: Constructor - Exit
+02-01 10:02:14.710  1058  1058 D TelephonyNetworkFactory[0]: Registering NetworkFactory
+02-01 10:02:14.712  1058  1058 D CallManager: registerPhone(GSM Handler (com.android.internal.telephony.GsmCdmaPhone) {f525b5c})
+02-01 10:02:14.715   561   597 D TelephonyRegistry: listen oscl: hasNotifySubscriptionInfoChangedOccurred==false no callback
+02-01 10:02:14.716  1058  1075 D SubscriptionController: [getSlotId]- subId invalid
+02-01 10:02:14.717  1070  1363 D TelephonyManager: getSimState: default sim:-1, sim state for slotIdx=0 is 6, return state as unknown
+02-01 10:02:14.750   561   597 D TelephonyRegistry: listen oscl: hasNotifySubscriptionInfoChangedOccurred==false no callback
+02-01 10:02:14.779  1058  1058 D RILJ    : [3651]> RIL_REQUEST_SET_TTY_MODE : 0 [SUB0]
+02-01 10:02:14.779  1058  1058 D RilRequest: [3651]< RIL_REQUEST_SET_TTY_MODE error: com.android.internal.telephony.CommandException: RADIO_NOT_AVAILABLE ret=
+02-01 10:02:14.783   561  1400 D TelephonyRegistry: listen oscl: hasNotifySubscriptionInfoChangedOccurred==false no callback
+02-01 10:02:14.784  1058  1058 D SubscriptionController: [getPhoneId] asked for default subId=-1
+02-01 10:02:14.788  1058  1058 D UiccController: EVENT_RADIO_UNAVAILABLE, dispose card
+02-01 10:02:14.788  1058  1058 D Phone   : config LCE service failed: com.android.internal.telephony.CommandException: RADIO_NOT_AVAILABLE
+02-01 10:02:14.788  1058  1058 D RILJ    : [3652]> GET_CURRENT_CALLS [SUB0]
+02-01 10:02:14.788  1058  1058 D RilRequest: [3652]< GET_CURRENT_CALLS error: com.android.internal.telephony.CommandException: RADIO_NOT_AVAILABLE ret=
+02-01 10:02:14.788  1058  1058 D GsmSMSDispatcher: GsmSMSDispatcher: subId = -2 slotId = 0
+02-01 10:02:14.789  1058  1058 E IccCardProxy: setExternalState: !override and newstate unchanged from NOT_READY
+02-01 10:02:14.789  1058  1058 E IccCardProxy: setExternalState: !override and newstate unchanged from NOT_READY
+02-01 10:02:14.789  1058  1058 D GsmCdmaPhone: [GsmCdmaPhone] Event EVENT_RADIO_OFF_OR_NOT_AVAILABLE Received
+02-01 10:02:14.789  1058  1058 E IccCardProxy: setExternalState: !override and newstate unchanged from NOT_READY
+02-01 10:02:14.789  1058  1058 D SST     : mDeviceShuttingDown=false, mDesiredPowerState=true, getRadioState=RADIO_UNAVAILABLE, mPowerOffDelayNeed=true, mAlarmSwitch=false, mRadioDisabledByCarrier=false
+02-01 10:02:14.790  1058  1058 D SST     : useDataRegStateForDataOnlyDevice: VoiceRegState=1 DataRegState=1
+02-01 10:02:14.790  1058  1058 D SST     : Poll ServiceState done:  oldSS=[1 1 voice home data home null null null null null null  Unknown Unknown CSS not supported 0 0 RoamInd=0 DefRoamInd=0 EmergOnly=false IsDataRoamingFromRegistration=false IsUsingCarrierAggregation=false] newSS=[1 1 voice home data home null null null null null null  Unknown Unknown CSS not supported -1 -1 RoamInd=-1 DefRoamInd=-1 EmergOnly=false IsDataRoamingFromRegistration=false IsUsingCarrierAggregation=false] oldMaxDataCalls=1 mNewMaxDataCalls=1 oldReasonDataDenied=-1 mNewReasonDataDenied=-1
+02-01 10:02:14.790  1058  1058 D SST     : updateSpnDisplay: radio is on but out of service, set plmn='没有服务'
+02-01 10:02:14.791  1058  1058 D SST     : updateSpnDisplay: changed sending intent rule=0 showPlmn='true' plmn='没有服务' showSpn='false' spn='' dataSpn='' subId='-2'
+02-01 10:02:14.798  1058  1058 D SubscriptionController: [setPlmnSpn] No valid subscription to store info
+02-01 10:02:14.799  1058  1058 D SubscriptionController: notifySubscriptionInfoChanged:
+02-01 10:02:14.799   561  1400 D TelephonyRegistry: notifySubscriptionInfoChanged: first invocation mRecords.size=16
+02-01 10:02:14.801  1058  1058 D TelephonyManager: setTelephonyProperty: success phoneId=0 property=gsm.operator.alpha value:  propVal=
+02-01 10:02:14.802  1058  1058 D TelephonyManager: setTelephonyProperty: success phoneId=0 property=gsm.operator.numeric value:  propVal=
+02-01 10:02:14.802  1058  1058 D SST     : operatorNumeric is null
+02-01 10:02:14.802  1058  1058 D TelephonyManager: setTelephonyProperty: success phoneId=0 property=gsm.operator.iso-country value:  propVal=
+02-01 10:02:14.803  1058  1058 D TelephonyManager: setTelephonyProperty: success phoneId=0 property=gsm.operator.isroaming value: false propVal=false
+02-01 10:02:14.803  1058  1058 D SST     : Broadcasting ServiceState : 1 1 voice home data home null null null null null null  Unknown Unknown CSS not supported -1 -1 RoamInd=-1 DefRoamInd=-1 EmergOnly=false IsDataRoamingFromRegistration=false IsUsingCarrierAggregation=false
+02-01 10:02:14.803  1058  1058 D DefaultPhoneNotifier: nofityServiceState: mRegistry=com.android.internal.telephony.ITelephonyRegistry$Stub$Proxy@5bbb51d ss=1 1 voice home data home null null null null null null  Unknown Unknown CSS not supported -1 -1 RoamInd=-1 DefRoamInd=-1 EmergOnly=false IsDataRoamingFromRegistration=false IsUsingCarrierAggregation=false sender=Handler (com.android.internal.telephony.GsmCdmaPhone) {f525b5c} phondId=0 subId=-2
+02-01 10:02:14.805  1058  1058 D SubscriptionController: [getSlotId]- subId invalid
+02-01 10:02:14.806   561  1272 D TelephonyManager: getSimState: default sim:-1, sim state for slotIdx=0 is 6, return state as unknown
+02-01 10:02:14.810  1058  1058 D SST     : mDeviceShuttingDown=false, mDesiredPowerState=true, getRadioState=RADIO_UNAVAILABLE, mPowerOffDelayNeed=true, mAlarmSwitch=false, mRadioDisabledByCarrier=false
+02-01 10:02:14.810  1058  1058 D SST     : useDataRegStateForDataOnlyDevice: VoiceRegState=1 DataRegState=1
+02-01 10:02:14.811  1058  1058 D SST     : Poll ServiceState done:  oldSS=[1 1 voice home data home null null null null null null  Unknown Unknown CSS not supported -1 -1 RoamInd=-1 DefRoamInd=-1 EmergOnly=false IsDataRoamingFromRegistration=false IsUsingCarrierAggregation=false] newSS=[1 1 voice home data home null null null null null null  Unknown Unknown CSS not supported -1 -1 RoamInd=-1 DefRoamInd=-1 EmergOnly=false IsDataRoamingFromRegistration=false IsUsingCarrierAggregation=false] oldMaxDataCalls=1 mNewMaxDataCalls=1 oldReasonDataDenied=-1 mNewReasonDataDenied=-1
+02-01 10:02:14.812  1058  1058 D DCT     : [0]Wifi state changed
+02-01 10:02:14.812  1058  1058 D DCT     : [0]WIFI_STATE_CHANGED_ACTION: enabled=false mIsWifiConnected=false
+02-01 10:02:14.812  1058  1058 D DCT     : [0]onRadioOffOrNotAvailable: is off and clean up all connections
+02-01 10:02:14.812  1058  1058 D DCT     : [0]cleanUpAllConnections: tearDown=false reason=radioTurnedOff
+02-01 10:02:14.812  1058  1058 D GsmCdmaPhone: [GsmCdmaPhone] getDataConnectionState apnType=default ret=DISCONNECTED
+02-01 10:02:14.817  1058  1058 D DCT     : [0]cleanUpConnection: X tearDown=false reason=radioTurnedOff apnContext={mApnType=default mState=IDLE mWaitingApns={null} mApnSetting={null} mReason=radioTurnedOff mDataEnabled=false mDependencyMet=true} dcac=null
+02-01 10:02:14.817  1058  1058 D GsmCdmaPhone: [GsmCdmaPhone] getDataConnectionState apnType=mms ret=DISCONNECTED
+02-01 10:02:14.820  1058  1058 D DCT     : [0]cleanUpConnection: X tearDown=false reason=radioTurnedOff apnContext={mApnType=mms mState=IDLE mWaitingApns={null} mApnSetting={null} mReason=radioTurnedOff mDataEnabled=false mDependencyMet=false} dcac=null
+02-01 10:02:14.820  1058  1058 D GsmCdmaPhone: [GsmCdmaPhone] getDataConnectionState apnType=cbs ret=DISCONNECTED
+02-01 10:02:14.823  1058  1058 D DCT     : [0]cleanUpConnection: X tearDown=false reason=radioTurnedOff apnContext={mApnType=cbs mState=IDLE mWaitingApns={null} mApnSetting={null} mReason=radioTurnedOff mDataEnabled=false mDependencyMet=true} dcac=null
+02-01 10:02:14.823  1058  1058 D GsmCdmaPhone: [GsmCdmaPhone] getDataConnectionState apnType=fota ret=DISCONNECTED
+02-01 10:02:14.827  1058  1058 D DCT     : [0]cleanUpConnection: X tearDown=false reason=radioTurnedOff apnContext={mApnType=fota mState=IDLE mWaitingApns={null} mApnSetting={null} mReason=radioTurnedOff mDataEnabled=false mDependencyMet=true} dcac=null
+02-01 10:02:14.827  1058  1058 D GsmCdmaPhone: [GsmCdmaPhone] getDataConnectionState apnType=supl ret=DISCONNECTED
+02-01 10:02:14.832  1058  1058 D DCT     : [0]cleanUpConnection: X tearDown=false reason=radioTurnedOff apnContext={mApnType=supl mState=IDLE mWaitingApns={null} mApnSetting={null} mReason=radioTurnedOff mDataEnabled=false mDependencyMet=true} dcac=null
+02-01 10:02:14.832  1058  1058 D GsmCdmaPhone: [GsmCdmaPhone] getDataConnectionState apnType=emergency ret=DISCONNECTED
+02-01 10:02:14.834  1058  1058 D DCT     : [0]cleanUpConnection: X tearDown=false reason=radioTurnedOff apnContext={mApnType=emergency mState=IDLE mWaitingApns={null} mApnSetting={null} mReason=radioTurnedOff mDataEnabled=false mDependencyMet=true} dcac=null
+02-01 10:02:14.834  1058  1058 D GsmCdmaPhone: [GsmCdmaPhone] getDataConnectionState apnType=dun ret=DISCONNECTED
+02-01 10:02:14.836  1058  1058 D DCT     : [0]cleanUpConnection: X tearDown=false reason=radioTurnedOff apnContext={mApnType=dun mState=IDLE mWaitingApns={null} mApnSetting={null} mReason=radioTurnedOff mDataEnabled=false mDependencyMet=true} dcac=null
+02-01 10:02:14.836  1058  1058 D GsmCdmaPhone: [GsmCdmaPhone] getDataConnectionState apnType=hipri ret=DISCONNECTED
+02-01 10:02:14.838  1058  1058 D DCT     : [0]cleanUpConnection: X tearDown=false reason=radioTurnedOff apnContext={mApnType=hipri mState=IDLE mWaitingApns={null} mApnSetting={null} mReason=radioTurnedOff mDataEnabled=false mDependencyMet=true} dcac=null
+02-01 10:02:14.838  1058  1058 D GsmCdmaPhone: [GsmCdmaPhone] getDataConnectionState apnType=ims ret=DISCONNECTED
+02-01 10:02:14.839  1058  1077 D SubscriptionController: [getSlotId]- subId invalid
+02-01 10:02:14.841  1058  1058 D DCT     : [0]cleanUpConnection: X tearDown=false reason=radioTurnedOff apnContext={mApnType=ims mState=IDLE mWaitingApns={null} mApnSetting={null} mReason=radioTurnedOff mDataEnabled=false mDependencyMet=true} dcac=null
+02-01 10:02:14.841  1058  1058 D DCT     : [0]stopNetStatPoll
+02-01 10:02:14.841  1058  1058 D DCT     : [0]cleanUpConnection: mDisconnectPendingCount = 0
+02-01 10:02:14.842  1058  1058 D DCT     : [0]isDataAllowed: No - defaultDataSelected= false - SIM not loaded - Not attached
+02-01 10:02:14.869  1058  1058 D DCT     : [0]onDataConnectionDetached: stop polling and notify detached
+02-01 10:02:14.869  1058  1058 D DCT     : [0]stopNetStatPoll
+02-01 10:02:14.870  1058  1058 D DCT     : [0]notifyDataConnection: reason=dataDetached
+02-01 10:02:14.870  1058  1058 D DCT     : [0]isDataAllowed: No - defaultDataSelected= false - SIM not loaded - Not attached
+02-01 10:02:14.878  1058  1432 D SubscriptionController: [getActiveSubInfoList] Sub Controller not ready
+02-01 10:02:14.898  1070  1363 D TelephonyManager: getSimState: default sim:-1, sim state for slotIdx=0 is 6, return state as unknown
+02-01 10:02:14.913  1058  1058 D DCT     : [0]onRoamingOff
+02-01 10:02:14.913  1058  1058 D DCT     : [0]setDataProfilesAsNeeded mSetDataProfileStatus: 0
+02-01 10:02:14.914  1058  1058 D DCT     : [0]notifyDataConnection: reason=roamingOff
+02-01 10:02:14.915  1058  1058 D DCT     : [0]isDataAllowed: No - defaultDataSelected= false - SIM not loaded - Not attached
+02-01 10:02:14.942  1058  1058 D DCT     : [0]setupDataOnConnectableApns: nwTypeChanged emergency:[state=IDLE,enabled=false] hipri:[state=IDLE,enabled=false] supl:[state=IDLE,enabled=false] mms:[state=IDLE,enabled=false] dun:[state=IDLE,enabled=false] fota:[state=IDLE,enabled=false] ims:[state=IDLE,enabled=false] default:[state=IDLE,enabled=false] cbs:[state=IDLE,enabled=false] 
+02-01 10:02:14.942  1058  1058 D SubscriptionInfoUpdater: [Receiver]+
+02-01 10:02:14.942  1058  1058 D SubscriptionInfoUpdater: Action: android.intent.action.SIM_STATE_CHANGED
+02-01 10:02:14.942  1058  1058 D SubscriptionInfoUpdater: slotId: 0
+02-01 10:02:14.942  1058  1058 D SubscriptionInfoUpdater: simStatus: NOT_READY
+02-01 10:02:14.942  1058  1058 D SubscriptionInfoUpdater: Ignoring simStatus: NOT_READY
+02-01 10:02:14.942  1058  1058 D SubscriptionInfoUpdater: [Receiver]-
+02-01 10:02:14.943  1058  1058 D TelephonyNetworkFactory[0]: onSubIdChange -1->-2
+02-01 10:02:14.943  1058  1058 D TelephonyNetworkFactory[0]: got request NetworkRequest [ BACKGROUND_REQUEST id=2, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ] with score 0
+02-01 10:02:14.943  1058  1058 D TelephonyNetworkFactory[0]: got request NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ] with score 0
+02-01 10:02:14.943  1058  1058 D DebugService: DebugService DebugService:
+02-01 10:02:14.959  1058  1058 D RILJ    : [3653]> RIL_REQUEST_QUERY_TTY_MODE [SUB0]
+02-01 10:02:14.959  1058  1058 D RilRequest: [3653]< RIL_REQUEST_QUERY_TTY_MODE error: com.android.internal.telephony.CommandException: RADIO_NOT_AVAILABLE ret=
+02-01 10:02:14.959  1058  1058 D GsmSMSDispatcher: GsmSMSDispatcher: subId = -2 slotId = 0
+02-01 10:02:14.959  1058  1058 E IccCardProxy: setExternalState: !override and newstate unchanged from NOT_READY
+02-01 10:02:14.959  1058  1058 D GsmCdmaCallTracker: Event EVENT_POLL_CALLS_RESULT Received
+02-01 10:02:14.959  1058  1058 D GsmCdmaCallTracker: [GsmCdmaCallTracker] update phone state, old=IDLE new=IDLE
+02-01 10:02:14.959  1058  1058 D SST     : SubscriptionListener.onSubscriptionInfoChanged
+02-01 10:02:14.959  1058  1058 E Phone   : getStoredVoiceMessageCount: invalid subId -2
+02-01 10:02:14.959  1058  1058 D GsmCdmaPhone: [GsmCdmaPhone] updateVoiceMail countVoiceMessages = 0 subId -2
+02-01 10:02:14.959  1058  1058 E Phone   : setVoiceMessageCount in sharedPreference: invalid subId -2
+02-01 10:02:14.959  1058  1058 D PhoneSwitcher: evaluating due to subChanged default 0->-1 phone[0] 0->-2
+02-01 10:02:14.960  1058  1058 D SubscriptionController: [getActiveSubInfoList] Sub Controller not ready
+02-01 10:02:14.961  1058  1058 D SubscriptionController: [getActiveSubInfoList] Sub Controller not ready
+02-01 10:02:15.007  1058  1058 D DCT     : [0]SubscriptionListener.onSubscriptionInfoChanged
+02-01 10:02:15.014  1058  1058 D PhoneSwitcher: evaluating due to netRequest
+02-01 10:02:15.023  1058  1058 D PhoneSwitcher: evaluating due to netRequest
+02-01 10:02:15.037  1058  1058 D TelephonyNetworkFactory[0]: not acting - isApp=false, isAct=false NetworkRequest [ BACKGROUND_REQUEST id=2, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+02-01 10:02:15.037  1058  1058 D TelephonyNetworkFactory[0]: not acting - isApp=false, isAct=false NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+02-01 10:02:15.310  1058  1077 D SubscriptionController: [getSlotId]- subId invalid
+02-01 10:02:15.359  1070  1363 D TelephonyManager: getSimState: default sim:-1, sim state for slotIdx=0 is 6, return state as unknown
+02-01 10:02:15.409  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:02:15.409  1058  1058 D DCT     : [0]Wifi state changed
+02-01 10:02:15.409  1058  1058 D DCT     : [0]WIFI_STATE_CHANGED_ACTION: enabled=true mIsWifiConnected=false
+02-01 10:02:15.416  1058  1432 D SubscriptionController: [getSlotId]- subId invalid
+02-01 10:02:15.418  1070  1363 D TelephonyManager: getSimState: default sim:-1, sim state for slotIdx=0 is 6, return state as unknown
+02-01 10:02:15.421  1058  1432 D SubscriptionController: [getActiveSubInfoList] Sub Controller not ready
+02-01 10:02:15.424  1058  1058 D WAP PUSH: Received broadcast android.intent.action.USER_UNLOCKED
+02-01 10:02:15.425  1058  1058 D WAP PUSH: Received broadcast android.intent.action.USER_UNLOCKED
+02-01 10:02:15.425  1058  1058 D SmsBroadcastUndelivered: Received broadcast android.intent.action.USER_UNLOCKED
+02-01 10:02:15.426  1058  1058 D SubscriptionInfoUpdater: [Receiver]+
+02-01 10:02:15.427  1058  1528 E WAP PUSH: bindService() for wappush manager failed
+02-01 10:02:15.429  1058  1075 D DCT     : [0]hasMatchedTetherApnSetting: APN=null
+02-01 10:02:15.430  1058  1058 D SubscriptionInfoUpdater: Action: android.intent.action.USER_UNLOCKED
+02-01 10:02:15.430  1058  1058 D SubscriptionInfoUpdater: Broadcasting intent ACTION_SIM_STATE_CHANGED for mCardIndex: 0
+02-01 10:02:15.437  1058  1530 D SmsBroadcastUndelivered: scanning raw table for undelivered messages
+02-01 10:02:15.438  1058  1058 D SubscriptionInfoUpdater: [Receiver]-
+02-01 10:02:15.438  1058  1529 E WAP PUSH: bindService() for wappush manager failed
+02-01 10:02:15.442  1058  1058 D SubscriptionInfoUpdater: [Receiver]+
+02-01 10:02:15.443  1058  1058 D SubscriptionInfoUpdater: Action: android.intent.action.SIM_STATE_CHANGED
+02-01 10:02:15.443  1058  1058 D SubscriptionInfoUpdater: slotId: 0
+02-01 10:02:15.443  1058  1058 D SubscriptionInfoUpdater: simStatus: NOT_READY
+02-01 10:02:15.443  1058  1058 D SubscriptionInfoUpdater: Ignoring simStatus: NOT_READY
+02-01 10:02:15.443  1058  1058 D SubscriptionInfoUpdater: [Receiver]-
+02-01 10:02:15.625  1058  1530 D SmsBroadcastUndelivered: finished scanning raw table in 187 ms
+02-01 10:02:15.661  1058  1526 D SubscriptionController: [getActiveSubInfoList] Sub Controller not ready
+02-01 10:02:15.678  1058  1526 D SubscriptionController: [getSlotId]- subId invalid
+02-01 10:02:15.692  1070  1363 D TelephonyManager: getSimState: default sim:-1, sim state for slotIdx=0 is 6, return state as unknown
+02-01 10:02:17.150  1058  1058 D SubscriptionController: [getPhoneId] asked for default subId=-1
+02-01 10:02:17.167  1058  1058 D GsmCdmaPhone: mBroadcastReceiver: action android.telephony.action.CARRIER_CONFIG_CHANGED
+02-01 10:02:17.171  1058  1058 I CSST    : reading time to delay notification: -1
+02-01 10:02:17.175  1058  1058 D ImsManager: updateVolteFeatureValue: available = false, enabled = true, nonTTY = true
+02-01 10:02:17.176  1058  1058 E ImsManager: updateImsServiceConfig: 
+02-01 10:02:17.176  1058  1058 E ImsManager: com.android.ims.ImsException: Service is unavailable, code = 106
+02-01 10:02:17.176  1058  1058 E ImsManager: 	at com.android.ims.ImsManager.checkAndThrowExceptionIfServiceUnavailable(ImsManager.java:1316)
+02-01 10:02:17.176  1058  1058 E ImsManager: 	at com.android.ims.ImsManager.getConfigInterface(ImsManager.java:1198)
+02-01 10:02:17.176  1058  1058 E ImsManager: 	at com.android.ims.ImsManager.updateVolteFeatureValue(ImsManager.java:780)
+02-01 10:02:17.176  1058  1058 E ImsManager: 	at com.android.ims.ImsManager.updateImsServiceConfig(ImsManager.java:740)
+02-01 10:02:17.176  1058  1058 E ImsManager: 	at com.android.internal.telephony.GsmCdmaPhone.handleMessage(GsmCdmaPhone.java:2084)
+02-01 10:02:17.176  1058  1058 E ImsManager: 	at android.os.Handler.dispatchMessage(Handler.java:102)
+02-01 10:02:17.176  1058  1058 E ImsManager: 	at android.os.Looper.loop(Looper.java:154)
+02-01 10:02:17.176  1058  1058 E ImsManager: 	at android.app.ActivityThread.main(ActivityThread.java:6141)
+02-01 10:02:17.176  1058  1058 E ImsManager: 	at java.lang.reflect.Method.invoke(Native Method)
+02-01 10:02:17.176  1058  1058 E ImsManager: 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:912)
+02-01 10:02:17.176  1058  1058 E ImsManager: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:802)
+02-01 10:02:17.177  1058  1058 D GsmCdmaPhone: [GsmCdmaPhone] broadcastEmergencyCallStateChanges = false
+02-01 10:02:17.177  1058  1058 E GsmCdmaPhone: [GsmCdmaPhone] Invalid cdma_roaming_mode settings: -1
+02-01 10:02:17.177  1058  1058 D EriManager: loadEriFileFromXml: check for alternate file
+02-01 10:02:17.178  1058  1058 D EriManager: loadEriFileFromXml: no alternate file
+02-01 10:02:17.179  1058  1058 D EriManager: eriFile = eri.xml
+02-01 10:02:17.182  1774  1774 D RILD    : **RIL Daemon Started**
+02-01 10:02:17.182  1774  1774 D RILD    : **RILd param count=6**
+02-01 10:02:17.182  1774  1774 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:02:17.183  1058  1058 D EriManager: loadEriFileFromXml: eri parsing successful, file loaded. ver = 1357, # of entries = 176
+02-01 10:02:17.183  1058  1058 D GsmCdmaPhone: [GsmCdmaPhone] ERI read, notify registrants
+02-01 10:02:17.382  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:02:17.461  1058  1389 D GsmCellBroadcastHandler: mWakeLock released
+02-01 10:02:17.477  1058  1397 D CellBroadcastHandler: mWakeLock released
+02-01 10:02:17.499  1058  1403 D CdmaServiceCategoryProgramHandler: mWakeLock released
+02-01 10:02:17.503  1058  1392 D GsmInboundSmsHandler: IdleState.processMessage:5
+02-01 10:02:17.504  1058  1401 D CdmaInboundSmsHandler: IdleState.processMessage:5
+02-01 10:02:17.504  1058  1392 D GsmInboundSmsHandler: Idle state processing message type 5
+02-01 10:02:17.504  1058  1401 D CdmaInboundSmsHandler: Idle state processing message type 5
+02-01 10:02:17.504  1058  1401 D CdmaInboundSmsHandler: mWakeLock released
+02-01 10:02:17.504  1058  1392 D GsmInboundSmsHandler: mWakeLock released
+02-01 10:02:18.425  1058  1382 I RILJ    : Couldn't find 'rild' socket; retrying after timeout
+02-01 10:02:18.588  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:02:22.017  1838  1838 D RILD    : **RIL Daemon Started**
+02-01 10:02:22.017  1838  1838 D RILD    : **RILd param count=6**
+02-01 10:02:22.018  1838  1838 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:02:22.426  1058  1382 I RILJ    : Couldn't find 'rild' socket; retrying after timeout
+02-01 10:02:26.429  1058  1382 I RILJ    : Couldn't find 'rild' socket; retrying after timeout
+02-01 10:02:27.134  1863  1863 D RILD    : **RIL Daemon Started**
+02-01 10:02:27.134  1863  1863 D RILD    : **RILd param count=6**
+02-01 10:02:27.134  1863  1863 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:02:30.432  1058  1382 I RILJ    : Couldn't find 'rild' socket; retrying after timeout
+02-01 10:02:32.238  1884  1884 D RILD    : **RIL Daemon Started**
+02-01 10:02:32.238  1884  1884 D RILD    : **RILd param count=6**
+02-01 10:02:32.238  1884  1884 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:02:34.436  1058  1382 I RILJ    : Couldn't find 'rild' socket; retrying after timeout
+02-01 10:02:35.383  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:02:36.572  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:02:37.312  1904  1904 D RILD    : **RIL Daemon Started**
+02-01 10:02:37.312  1904  1904 D RILD    : **RILd param count=6**
+02-01 10:02:37.313  1904  1904 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:02:38.439  1058  1382 I RILJ    : Couldn't find 'rild' socket; retrying after timeout
+02-01 10:02:42.405  1923  1923 D RILD    : **RIL Daemon Started**
+02-01 10:02:42.405  1923  1923 D RILD    : **RILd param count=6**
+02-01 10:02:42.405  1923  1923 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:02:42.440  1058  1382 I RILJ    : Couldn't find 'rild' socket; retrying after timeout
+02-01 10:02:46.291  1058  1432 D SubscriptionController: [getSlotId]- subId invalid
+02-01 10:02:46.291  1058  1432 D SubscriptionController: [getSubId]- invalid slotIdx=-1
+02-01 10:02:46.418  1058  1432 D DCT     : [0]hasMatchedTetherApnSetting: APN=null
+02-01 10:02:46.440  1058  1382 E RILJ    : Couldn't find 'rild' socket after 8 times, continuing to retry silently
+02-01 10:02:46.945  1058  1432 D SubscriptionController: [getSlotId]- subId invalid
+02-01 10:02:46.947  1148  1148 D TelephonyManager: getSimState: default sim:-1, sim state for slotIdx=0 is 6, return state as unknown
+02-01 10:02:46.977  1058  1058 D RILJ    : [3654]> RIL_REQUEST_GET_ACTIVITY_INFO [SUB0]
+02-01 10:02:46.978  1058  1058 D RilRequest: [3654]< RIL_REQUEST_GET_ACTIVITY_INFO error: com.android.internal.telephony.CommandException: RADIO_NOT_AVAILABLE ret=
+02-01 10:02:47.499  1978  1978 D RILD    : **RIL Daemon Started**
+02-01 10:02:47.499  1978  1978 D RILD    : **RILd param count=6**
+02-01 10:02:47.499  1978  1978 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:02:52.585  2000  2000 D RILD    : **RIL Daemon Started**
+02-01 10:02:52.585  2000  2000 D RILD    : **RILd param count=6**
+02-01 10:02:52.586  2000  2000 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:02:52.943  1058  1096 D SubscriptionController: [getSlotId]- subId invalid
+02-01 10:02:52.944  1148  1148 D TelephonyManager: getSimState: default sim:-1, sim state for slotIdx=0 is 6, return state as unknown
+02-01 10:02:53.033  1058  1058 D RILJ    : [3655]> RIL_REQUEST_GET_ACTIVITY_INFO [SUB0]
+02-01 10:02:53.033  1058  1058 D RilRequest: [3655]< RIL_REQUEST_GET_ACTIVITY_INFO error: com.android.internal.telephony.CommandException: RADIO_NOT_AVAILABLE ret=
+02-01 10:02:55.395  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:02:56.568  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:02:57.690  2021  2021 D RILD    : **RIL Daemon Started**
+02-01 10:02:57.690  2021  2021 D RILD    : **RILd param count=6**
+02-01 10:02:57.690  2021  2021 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:03:02.763  2043  2043 D RILD    : **RIL Daemon Started**
+02-01 10:03:02.763  2043  2043 D RILD    : **RILd param count=6**
+02-01 10:03:02.763  2043  2043 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:03:07.866  2061  2061 D RILD    : **RIL Daemon Started**
+02-01 10:03:07.866  2061  2061 D RILD    : **RILd param count=6**
+02-01 10:03:07.867  2061  2061 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:03:12.958  2080  2080 D RILD    : **RIL Daemon Started**
+02-01 10:03:12.958  2080  2080 D RILD    : **RILd param count=6**
+02-01 10:03:12.958  2080  2080 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:03:15.412  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:03:16.582  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:03:17.060  2098  2098 D RILD    : **RIL Daemon Started**
+02-01 10:03:17.060  2098  2098 D RILD    : **RILd param count=6**
+02-01 10:03:17.060  2098  2098 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:03:22.148  2119  2119 D RILD    : **RIL Daemon Started**
+02-01 10:03:22.149  2119  2119 D RILD    : **RILd param count=6**
+02-01 10:03:22.149  2119  2119 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:03:27.222  2139  2139 D RILD    : **RIL Daemon Started**
+02-01 10:03:27.222  2139  2139 D RILD    : **RILd param count=6**
+02-01 10:03:27.222  2139  2139 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:03:32.312  2156  2156 D RILD    : **RIL Daemon Started**
+02-01 10:03:32.312  2156  2156 D RILD    : **RILd param count=6**
+02-01 10:03:32.312  2156  2156 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:03:35.408  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:03:36.605  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:03:37.407  2176  2176 D RILD    : **RIL Daemon Started**
+02-01 10:03:37.407  2176  2176 D RILD    : **RILd param count=6**
+02-01 10:03:37.407  2176  2176 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:03:42.487  2196  2196 D RILD    : **RIL Daemon Started**
+02-01 10:03:42.487  2196  2196 D RILD    : **RILd param count=6**
+02-01 10:03:42.487  2196  2196 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:03:47.590  2213  2213 D RILD    : **RIL Daemon Started**
+02-01 10:03:47.590  2213  2213 D RILD    : **RILd param count=6**
+02-01 10:03:47.590  2213  2213 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:03:52.693  2234  2234 D RILD    : **RIL Daemon Started**
+02-01 10:03:52.693  2234  2234 D RILD    : **RILd param count=6**
+02-01 10:03:52.694  2234  2234 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:03:55.413  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:03:56.634  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:03:57.806  2253  2253 D RILD    : **RIL Daemon Started**
+02-01 10:03:57.806  2253  2253 D RILD    : **RILd param count=6**
+02-01 10:03:57.806  2253  2253 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:04:02.898  2271  2271 D RILD    : **RIL Daemon Started**
+02-01 10:04:02.898  2271  2271 D RILD    : **RILd param count=6**
+02-01 10:04:02.898  2271  2271 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:04:07.988  2291  2291 D RILD    : **RIL Daemon Started**
+02-01 10:04:07.988  2291  2291 D RILD    : **RILd param count=6**
+02-01 10:04:07.989  2291  2291 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:04:12.074  2307  2307 D RILD    : **RIL Daemon Started**
+02-01 10:04:12.074  2307  2307 D RILD    : **RILd param count=6**
+02-01 10:04:12.074  2307  2307 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:04:15.443  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:04:16.623  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:04:17.191  2325  2325 D RILD    : **RIL Daemon Started**
+02-01 10:04:17.191  2325  2325 D RILD    : **RILd param count=6**
+02-01 10:04:17.191  2325  2325 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:04:22.293  2346  2346 D RILD    : **RIL Daemon Started**
+02-01 10:04:22.293  2346  2346 D RILD    : **RILd param count=6**
+02-01 10:04:22.294  2346  2346 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:04:27.396  2365  2365 D RILD    : **RIL Daemon Started**
+02-01 10:04:27.396  2365  2365 D RILD    : **RILd param count=6**
+02-01 10:04:27.397  2365  2365 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:04:32.462  2383  2383 D RILD    : **RIL Daemon Started**
+02-01 10:04:32.462  2383  2383 D RILD    : **RILd param count=6**
+02-01 10:04:32.462  2383  2383 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:04:35.440  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:04:36.641  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:04:37.566  2403  2403 D RILD    : **RIL Daemon Started**
+02-01 10:04:37.567  2403  2403 D RILD    : **RILd param count=6**
+02-01 10:04:37.567  2403  2403 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:04:42.673  2422  2422 D RILD    : **RIL Daemon Started**
+02-01 10:04:42.673  2422  2422 D RILD    : **RILd param count=6**
+02-01 10:04:42.673  2422  2422 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:04:47.788  2442  2442 D RILD    : **RIL Daemon Started**
+02-01 10:04:47.788  2442  2442 D RILD    : **RILd param count=6**
+02-01 10:04:47.788  2442  2442 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:04:52.889  2461  2461 D RILD    : **RIL Daemon Started**
+02-01 10:04:52.890  2461  2461 D RILD    : **RILd param count=6**
+02-01 10:04:52.890  2461  2461 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:04:55.423  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:04:56.603  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:04:57.978  2480  2480 D RILD    : **RIL Daemon Started**
+02-01 10:04:57.978  2480  2480 D RILD    : **RILd param count=6**
+02-01 10:04:57.978  2480  2480 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:05:02.066  2497  2497 D RILD    : **RIL Daemon Started**
+02-01 10:05:02.066  2497  2497 D RILD    : **RILd param count=6**
+02-01 10:05:02.066  2497  2497 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:05:07.155  2513  2513 D RILD    : **RIL Daemon Started**
+02-01 10:05:07.155  2513  2513 D RILD    : **RILd param count=6**
+02-01 10:05:07.155  2513  2513 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:05:12.256  2534  2534 D RILD    : **RIL Daemon Started**
+02-01 10:05:12.256  2534  2534 D RILD    : **RILd param count=6**
+02-01 10:05:12.256  2534  2534 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:05:15.452  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:05:16.637  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:05:17.356  2555  2555 D RILD    : **RIL Daemon Started**
+02-01 10:05:17.356  2555  2555 D RILD    : **RILd param count=6**
+02-01 10:05:17.357  2555  2555 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:05:22.471  2571  2571 D RILD    : **RIL Daemon Started**
+02-01 10:05:22.471  2571  2571 D RILD    : **RILd param count=6**
+02-01 10:05:22.471  2571  2571 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:05:27.587  2592  2592 D RILD    : **RIL Daemon Started**
+02-01 10:05:27.587  2592  2592 D RILD    : **RILd param count=6**
+02-01 10:05:27.588  2592  2592 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:05:32.689  2612  2612 D RILD    : **RIL Daemon Started**
+02-01 10:05:32.690  2612  2612 D RILD    : **RILd param count=6**
+02-01 10:05:32.690  2612  2612 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:05:35.453  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:05:36.640  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:05:37.781  2631  2631 D RILD    : **RIL Daemon Started**
+02-01 10:05:37.781  2631  2631 D RILD    : **RILd param count=6**
+02-01 10:05:37.781  2631  2631 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:05:42.879  2650  2650 D RILD    : **RIL Daemon Started**
+02-01 10:05:42.879  2650  2650 D RILD    : **RILd param count=6**
+02-01 10:05:42.880  2650  2650 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:05:47.976  2671  2671 D RILD    : **RIL Daemon Started**
+02-01 10:05:47.976  2671  2671 D RILD    : **RILd param count=6**
+02-01 10:05:47.977  2671  2671 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:05:52.076  2687  2687 D RILD    : **RIL Daemon Started**
+02-01 10:05:52.076  2687  2687 D RILD    : **RILd param count=6**
+02-01 10:05:52.076  2687  2687 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:05:55.461  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:05:56.643  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:05:57.179  2705  2705 D RILD    : **RIL Daemon Started**
+02-01 10:05:57.179  2705  2705 D RILD    : **RILd param count=6**
+02-01 10:05:57.179  2705  2705 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:06:02.280  2723  2723 D RILD    : **RIL Daemon Started**
+02-01 10:06:02.280  2723  2723 D RILD    : **RILd param count=6**
+02-01 10:06:02.280  2723  2723 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:06:07.380  2744  2744 D RILD    : **RIL Daemon Started**
+02-01 10:06:07.380  2744  2744 D RILD    : **RILd param count=6**
+02-01 10:06:07.380  2744  2744 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:06:12.448  2764  2764 D RILD    : **RIL Daemon Started**
+02-01 10:06:12.448  2764  2764 D RILD    : **RILd param count=6**
+02-01 10:06:12.448  2764  2764 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:06:15.463  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:06:16.659  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:06:17.556  2781  2781 D RILD    : **RIL Daemon Started**
+02-01 10:06:17.556  2781  2781 D RILD    : **RILd param count=6**
+02-01 10:06:17.556  2781  2781 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:06:22.659  2802  2802 D RILD    : **RIL Daemon Started**
+02-01 10:06:22.659  2802  2802 D RILD    : **RILd param count=6**
+02-01 10:06:22.659  2802  2802 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:06:27.760  2824  2824 D RILD    : **RIL Daemon Started**
+02-01 10:06:27.760  2824  2824 D RILD    : **RILd param count=6**
+02-01 10:06:27.760  2824  2824 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:06:32.860  2839  2839 D RILD    : **RIL Daemon Started**
+02-01 10:06:32.860  2839  2839 D RILD    : **RILd param count=6**
+02-01 10:06:32.860  2839  2839 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:06:35.468  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:06:36.657  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:06:37.960  2860  2860 D RILD    : **RIL Daemon Started**
+02-01 10:06:37.960  2860  2860 D RILD    : **RILd param count=6**
+02-01 10:06:37.960  2860  2860 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:06:42.060  2879  2879 D RILD    : **RIL Daemon Started**
+02-01 10:06:42.060  2879  2879 D RILD    : **RILd param count=6**
+02-01 10:06:42.060  2879  2879 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:06:47.157  2900  2900 D RILD    : **RIL Daemon Started**
+02-01 10:06:47.157  2900  2900 D RILD    : **RILd param count=6**
+02-01 10:06:47.157  2900  2900 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:06:52.245  2918  2918 D RILD    : **RIL Daemon Started**
+02-01 10:06:52.245  2918  2918 D RILD    : **RILd param count=6**
+02-01 10:06:52.245  2918  2918 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:06:55.472  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:06:56.679  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:06:57.346  2938  2938 D RILD    : **RIL Daemon Started**
+02-01 10:06:57.346  2938  2938 D RILD    : **RILd param count=6**
+02-01 10:06:57.346  2938  2938 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:07:02.435  2957  2957 D RILD    : **RIL Daemon Started**
+02-01 10:07:02.435  2957  2957 D RILD    : **RILd param count=6**
+02-01 10:07:02.435  2957  2957 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:07:07.536  2975  2975 D RILD    : **RIL Daemon Started**
+02-01 10:07:07.536  2975  2975 D RILD    : **RILd param count=6**
+02-01 10:07:07.536  2975  2975 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:07:12.617  2995  2995 D RILD    : **RIL Daemon Started**
+02-01 10:07:12.617  2995  2995 D RILD    : **RILd param count=6**
+02-01 10:07:12.618  2995  2995 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:07:15.478  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:07:16.668  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:07:17.708  3015  3015 D RILD    : **RIL Daemon Started**
+02-01 10:07:17.708  3015  3015 D RILD    : **RILd param count=6**
+02-01 10:07:17.708  3015  3015 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:07:22.825  3033  3033 D RILD    : **RIL Daemon Started**
+02-01 10:07:22.825  3033  3033 D RILD    : **RILd param count=6**
+02-01 10:07:22.825  3033  3033 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:07:27.889  3053  3053 D RILD    : **RIL Daemon Started**
+02-01 10:07:27.889  3053  3053 D RILD    : **RILd param count=6**
+02-01 10:07:27.889  3053  3053 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:07:32.989  3072  3072 D RILD    : **RIL Daemon Started**
+02-01 10:07:32.989  3072  3072 D RILD    : **RILd param count=6**
+02-01 10:07:32.990  3072  3072 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:07:35.485  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:07:36.679  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:07:37.065  3090  3090 D RILD    : **RIL Daemon Started**
+02-01 10:07:37.066  3090  3090 D RILD    : **RILd param count=6**
+02-01 10:07:37.066  3090  3090 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:07:42.155  3109  3109 D RILD    : **RIL Daemon Started**
+02-01 10:07:42.155  3109  3109 D RILD    : **RILd param count=6**
+02-01 10:07:42.155  3109  3109 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:07:47.245  3130  3130 D RILD    : **RIL Daemon Started**
+02-01 10:07:47.245  3130  3130 D RILD    : **RILd param count=6**
+02-01 10:07:47.245  3130  3130 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:07:52.322  3151  3151 D RILD    : **RIL Daemon Started**
+02-01 10:07:52.323  3151  3151 D RILD    : **RILd param count=6**
+02-01 10:07:52.323  3151  3151 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:07:55.466  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:07:56.668  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:07:57.437  3166  3166 D RILD    : **RIL Daemon Started**
+02-01 10:07:57.437  3166  3166 D RILD    : **RILd param count=6**
+02-01 10:07:57.438  3166  3166 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:08:02.539  3187  3187 D RILD    : **RIL Daemon Started**
+02-01 10:08:02.540  3187  3187 D RILD    : **RILd param count=6**
+02-01 10:08:02.540  3187  3187 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:08:07.625  3208  3208 D RILD    : **RIL Daemon Started**
+02-01 10:08:07.625  3208  3208 D RILD    : **RILd param count=6**
+02-01 10:08:07.625  3208  3208 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:08:12.726  3224  3224 D RILD    : **RIL Daemon Started**
+02-01 10:08:12.726  3224  3224 D RILD    : **RILd param count=6**
+02-01 10:08:12.727  3224  3224 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:08:15.488  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:08:16.691  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:08:17.849  3245  3245 D RILD    : **RIL Daemon Started**
+02-01 10:08:17.849  3245  3245 D RILD    : **RILd param count=6**
+02-01 10:08:17.849  3245  3245 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:08:22.944  3266  3266 D RILD    : **RIL Daemon Started**
+02-01 10:08:22.944  3266  3266 D RILD    : **RILd param count=6**
+02-01 10:08:22.945  3266  3266 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:08:27.043  3281  3281 D RILD    : **RIL Daemon Started**
+02-01 10:08:27.043  3281  3281 D RILD    : **RILd param count=6**
+02-01 10:08:27.043  3281  3281 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:08:32.144  3299  3299 D RILD    : **RIL Daemon Started**
+02-01 10:08:32.144  3299  3299 D RILD    : **RILd param count=6**
+02-01 10:08:32.144  3299  3299 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:08:35.493  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:08:36.659  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:08:37.243  3318  3318 D RILD    : **RIL Daemon Started**
+02-01 10:08:37.243  3318  3318 D RILD    : **RILd param count=6**
+02-01 10:08:37.244  3318  3318 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:08:42.343  3339  3339 D RILD    : **RIL Daemon Started**
+02-01 10:08:42.343  3339  3339 D RILD    : **RILd param count=6**
+02-01 10:08:42.343  3339  3339 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:08:47.443  3357  3357 D RILD    : **RIL Daemon Started**
+02-01 10:08:47.443  3357  3357 D RILD    : **RILd param count=6**
+02-01 10:08:47.443  3357  3357 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:08:52.543  3376  3376 D RILD    : **RIL Daemon Started**
+02-01 10:08:52.543  3376  3376 D RILD    : **RILd param count=6**
+02-01 10:08:52.543  3376  3376 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:08:55.498  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:08:56.697  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:08:57.643  3396  3396 D RILD    : **RIL Daemon Started**
+02-01 10:08:57.643  3396  3396 D RILD    : **RILd param count=6**
+02-01 10:08:57.644  3396  3396 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:09:02.742  3414  3414 D RILD    : **RIL Daemon Started**
+02-01 10:09:02.742  3414  3414 D RILD    : **RILd param count=6**
+02-01 10:09:02.742  3414  3414 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:09:07.843  3433  3433 D RILD    : **RIL Daemon Started**
+02-01 10:09:07.843  3433  3433 D RILD    : **RILd param count=6**
+02-01 10:09:07.844  3433  3433 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:09:12.943  3454  3454 D RILD    : **RIL Daemon Started**
+02-01 10:09:12.944  3454  3454 D RILD    : **RILd param count=6**
+02-01 10:09:12.944  3454  3454 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:09:15.504  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:09:16.720  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:09:17.016  3470  3470 D RILD    : **RIL Daemon Started**
+02-01 10:09:17.016  3470  3470 D RILD    : **RILd param count=6**
+02-01 10:09:17.016  3470  3470 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:09:22.105  3487  3487 D RILD    : **RIL Daemon Started**
+02-01 10:09:22.105  3487  3487 D RILD    : **RILd param count=6**
+02-01 10:09:22.105  3487  3487 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:09:27.221  3508  3508 D RILD    : **RIL Daemon Started**
+02-01 10:09:27.221  3508  3508 D RILD    : **RILd param count=6**
+02-01 10:09:27.221  3508  3508 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:09:32.323  3527  3527 D RILD    : **RIL Daemon Started**
+02-01 10:09:32.323  3527  3527 D RILD    : **RILd param count=6**
+02-01 10:09:32.324  3527  3527 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:09:35.526  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:09:36.714  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:09:37.441  3545  3545 D RILD    : **RIL Daemon Started**
+02-01 10:09:37.441  3545  3545 D RILD    : **RILd param count=6**
+02-01 10:09:37.441  3545  3545 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:09:42.531  3566  3566 D RILD    : **RIL Daemon Started**
+02-01 10:09:42.531  3566  3566 D RILD    : **RILd param count=6**
+02-01 10:09:42.532  3566  3566 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:09:47.633  3585  3585 D RILD    : **RIL Daemon Started**
+02-01 10:09:47.633  3585  3585 D RILD    : **RILd param count=6**
+02-01 10:09:47.633  3585  3585 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:09:52.736  3603  3603 D RILD    : **RIL Daemon Started**
+02-01 10:09:52.736  3603  3603 D RILD    : **RILd param count=6**
+02-01 10:09:52.737  3603  3603 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:09:55.509  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:09:56.708  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:09:57.840  3608  3608 D RILD    : **RIL Daemon Started**
+02-01 10:09:57.840  3608  3608 D RILD    : **RILd param count=6**
+02-01 10:09:57.840  3608  3608 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:10:02.931  3612  3612 D RILD    : **RIL Daemon Started**
+02-01 10:10:02.932  3612  3612 D RILD    : **RILd param count=6**
+02-01 10:10:02.932  3612  3612 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:10:07.033  3618  3618 D RILD    : **RIL Daemon Started**
+02-01 10:10:07.034  3618  3618 D RILD    : **RILd param count=6**
+02-01 10:10:07.034  3618  3618 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:10:12.137  3622  3622 D RILD    : **RIL Daemon Started**
+02-01 10:10:12.137  3622  3622 D RILD    : **RILd param count=6**
+02-01 10:10:12.137  3622  3622 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:10:15.517  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:10:16.722  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:10:17.254  3628  3628 D RILD    : **RIL Daemon Started**
+02-01 10:10:17.254  3628  3628 D RILD    : **RILd param count=6**
+02-01 10:10:17.255  3628  3628 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:10:22.345  3633  3633 D RILD    : **RIL Daemon Started**
+02-01 10:10:22.345  3633  3633 D RILD    : **RILd param count=6**
+02-01 10:10:22.345  3633  3633 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:10:27.452  3637  3637 D RILD    : **RIL Daemon Started**
+02-01 10:10:27.452  3637  3637 D RILD    : **RILd param count=6**
+02-01 10:10:27.452  3637  3637 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:10:32.541  3643  3643 D RILD    : **RIL Daemon Started**
+02-01 10:10:32.541  3643  3643 D RILD    : **RILd param count=6**
+02-01 10:10:32.541  3643  3643 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:10:35.520  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:10:36.737  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:10:37.631  3649  3649 D RILD    : **RIL Daemon Started**
+02-01 10:10:37.631  3649  3649 D RILD    : **RILd param count=6**
+02-01 10:10:37.631  3649  3649 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:10:42.733  3653  3653 D RILD    : **RIL Daemon Started**
+02-01 10:10:42.733  3653  3653 D RILD    : **RILd param count=6**
+02-01 10:10:42.733  3653  3653 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:10:47.825  3659  3659 D RILD    : **RIL Daemon Started**
+02-01 10:10:47.825  3659  3659 D RILD    : **RILd param count=6**
+02-01 10:10:47.825  3659  3659 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:10:52.927  3665  3665 D RILD    : **RIL Daemon Started**
+02-01 10:10:52.927  3665  3665 D RILD    : **RILd param count=6**
+02-01 10:10:52.927  3665  3665 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:10:55.522  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:10:56.718  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:10:57.015  3668  3668 D RILD    : **RIL Daemon Started**
+02-01 10:10:57.015  3668  3668 D RILD    : **RILd param count=6**
+02-01 10:10:57.015  3668  3668 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:11:02.116  3675  3675 D RILD    : **RIL Daemon Started**
+02-01 10:11:02.116  3675  3675 D RILD    : **RILd param count=6**
+02-01 10:11:02.117  3675  3675 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:11:07.208  3679  3679 D RILD    : **RIL Daemon Started**
+02-01 10:11:07.208  3679  3679 D RILD    : **RILd param count=6**
+02-01 10:11:07.208  3679  3679 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:11:12.310  3685  3685 D RILD    : **RIL Daemon Started**
+02-01 10:11:12.310  3685  3685 D RILD    : **RILd param count=6**
+02-01 10:11:12.310  3685  3685 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:11:15.532  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:11:16.740  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:11:17.413  3691  3691 D RILD    : **RIL Daemon Started**
+02-01 10:11:17.413  3691  3691 D RILD    : **RILd param count=6**
+02-01 10:11:17.413  3691  3691 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:11:22.517  3694  3694 D RILD    : **RIL Daemon Started**
+02-01 10:11:22.517  3694  3694 D RILD    : **RILd param count=6**
+02-01 10:11:22.517  3694  3694 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:11:27.596  3720  3720 D RILD    : **RIL Daemon Started**
+02-01 10:11:27.596  3720  3720 D RILD    : **RILd param count=6**
+02-01 10:11:27.596  3720  3720 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:11:32.685  3738  3738 D RILD    : **RIL Daemon Started**
+02-01 10:11:32.685  3738  3738 D RILD    : **RILd param count=6**
+02-01 10:11:32.685  3738  3738 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:11:35.512  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:11:36.700  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:11:37.766  3755  3755 D RILD    : **RIL Daemon Started**
+02-01 10:11:37.766  3755  3755 D RILD    : **RILd param count=6**
+02-01 10:11:37.767  3755  3755 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:11:42.873  3775  3775 D RILD    : **RIL Daemon Started**
+02-01 10:11:42.873  3775  3775 D RILD    : **RILd param count=6**
+02-01 10:11:42.873  3775  3775 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:11:47.973  3796  3796 D RILD    : **RIL Daemon Started**
+02-01 10:11:47.974  3796  3796 D RILD    : **RILd param count=6**
+02-01 10:11:47.974  3796  3796 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:11:52.042  3810  3810 D RILD    : **RIL Daemon Started**
+02-01 10:11:52.042  3810  3810 D RILD    : **RILd param count=6**
+02-01 10:11:52.042  3810  3810 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:11:55.533  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:11:56.724  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:11:57.161  3829  3829 D RILD    : **RIL Daemon Started**
+02-01 10:11:57.161  3829  3829 D RILD    : **RILd param count=6**
+02-01 10:11:57.161  3829  3829 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:12:02.244  3850  3850 D RILD    : **RIL Daemon Started**
+02-01 10:12:02.244  3850  3850 D RILD    : **RILd param count=6**
+02-01 10:12:02.244  3850  3850 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:12:07.353  3869  3869 D RILD    : **RIL Daemon Started**
+02-01 10:12:07.353  3869  3869 D RILD    : **RILd param count=6**
+02-01 10:12:07.353  3869  3869 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:12:12.453  3887  3887 D RILD    : **RIL Daemon Started**
+02-01 10:12:12.453  3887  3887 D RILD    : **RILd param count=6**
+02-01 10:12:12.453  3887  3887 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:12:15.540  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:12:16.750  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:12:17.568  3908  3908 D RILD    : **RIL Daemon Started**
+02-01 10:12:17.568  3908  3908 D RILD    : **RILd param count=6**
+02-01 10:12:17.568  3908  3908 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:12:22.673  3926  3926 D RILD    : **RIL Daemon Started**
+02-01 10:12:22.673  3926  3926 D RILD    : **RILd param count=6**
+02-01 10:12:22.674  3926  3926 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:12:27.772  3944  3944 D RILD    : **RIL Daemon Started**
+02-01 10:12:27.772  3944  3944 D RILD    : **RILd param count=6**
+02-01 10:12:27.772  3944  3944 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:12:32.873  3965  3965 D RILD    : **RIL Daemon Started**
+02-01 10:12:32.874  3965  3965 D RILD    : **RILd param count=6**
+02-01 10:12:32.874  3965  3965 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:12:35.543  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:12:36.743  1058  1058 D DCT     : [0]NETWORK_STATE_CHANGED_ACTION: mIsWifiConnected=false
+02-01 10:12:37.974  3984  3984 D RILD    : **RIL Daemon Started**
+02-01 10:12:37.974  3984  3984 D RILD    : **RILd param count=6**
+02-01 10:12:37.974  3984  3984 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:12:42.073  4002  4002 D RILD    : **RIL Daemon Started**
+02-01 10:12:42.074  4002  4002 D RILD    : **RILd param count=6**
+02-01 10:12:42.074  4002  4002 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:12:47.173  4017  4017 D RILD    : **RIL Daemon Started**
+02-01 10:12:47.173  4017  4017 D RILD    : **RILd param count=6**
+02-01 10:12:47.174  4017  4017 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found
+02-01 10:12:52.273  4041  4041 D RILD    : **RIL Daemon Started**
+02-01 10:12:52.273  4041  4041 D RILD    : **RILd param count=6**
+02-01 10:12:52.273  4041  4041 E RILD    : dlopen failed: dlopen failed: library "/system/lib/libref-ril-ml302.c0" not found

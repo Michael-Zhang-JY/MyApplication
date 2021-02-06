@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainService">
+
+    <ImageView
+        android:id="@+id/mianImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/img_33"
+        android:scaleType="fitXY"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textViewInit"
+        android:layout_width="match_parent"
+        android:layout_height="97dp"
+        android:background="@drawable/rectangle17"
+        android:gravity="center"
+        android:text="网络连接，请稍后/Connected, please hold on"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:fontFamily="@font/pingfangbold"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,UnusedAttribute" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,9 @@
     <uses-permission
         android:name="android.permission.INJECT_EVENTS"
         tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="com.hidglobal.ia.omnikey.service.permission.SMARTCARDIO" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -21,11 +24,12 @@
     <uses-permission
         android:name="android.permission.PACKAGE_USAGE_STATS"
         tools:ignore="ProtectedPermissions" />
-
-    <uses-permission android:name="android.permission.INSTALL_PACKAGES"
+    <uses-permission
+        android:name="android.permission.INSTALL_PACKAGES"
         tools:ignore="ProtectedPermissions" />
-
-
+    <uses-permission android:name="android.permission.RECEIVE_SMS" /> <!-- 接收短信权限 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
 
     <application
         android:allowBackup="true"
@@ -35,7 +39,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
+        <!-- 7.1远程升级 -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.example.myapplication"
@@ -46,7 +50,7 @@
                 android:resource="@xml/path" />
         </provider>
 
-        <activity android:name=".MainMicrosoft"/>
+        <activity android:name=".MainMicrosoft" />
         <activity android:name=".MainService">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -67,6 +71,15 @@
             android:name=".MainActivity"
             android:screenOrientation="landscape" />
 
+        <receiver
+            android:name=".BroadCast.SmsReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+                <!--接收收到信息的广播-->
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

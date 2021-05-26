@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Binder;
-import android.os.Handler;
 import android.os.IBinder;
 import android.telephony.TelephonyManager;
 import android.util.Log;
@@ -17,6 +16,8 @@ import com.example.myapplication.APKdownload.DownloadUtil;
 import com.example.myapplication.MainActivity;
 import com.example.myapplication.MainDetailsPage;
 import com.example.myapplication.MainService;
+import com.example.myapplication.OneNetData.BackendData;
+import com.example.myapplication.SerialPort.SerialDataSend;
 import com.lztek.toolkit.Lztek;
 
 import org.eclipse.paho.android.service.MqttAndroidClient;
@@ -30,12 +31,8 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.RandomAccessFile;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Objects;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -51,18 +48,15 @@ public class MQTTService extends Service {
     private Lztek lztek = Lztek.create(this);
     public static MQTTService me;
 
-    public static final String SENSORIDONE = "DATAser";            // 数据流名称
-    public static final String SENSORIDTHREE = "DATAchanInfresult";     // 出货数据
     public static final String SENSORFOUR = "DATAVersion";       // 版本号
-    public static final String SENSORURL = "DATAUrl";           // 主动上报上线通知
-    public static final String SENSORCHANS = "DATAmendChans";   // 上报设备补货信息
     public static final String SENSORICCID = "DATAsimimsi";   // 上报设备补货信息
 
     private String host = "tcp://183.230.40.39:6002";
-    private String userName = "400841";
-    private String passWord = "MZRCNcTwVfYm6sI9fD=T=8TtcG4=";
+    private String userName = "400841";                                        // 产品ID
+    public static String registrationCode = "h1jS7Vz6ohhoQH4b";               // 设备注册码
+    private String passWord = "=2ZuWLh3geuzyJ73iaXb3GdwwNI=";
     private static String myTopic = UUID.randomUUID().toString();      //要订阅的主题
-    private String clientId = "604951928";//客户端标识
+    private String clientId = "718814121";//客户端标识
     private IGetMessageCallBack IGetMessageCallBack;
     private String com = "/dev/ttyUSB1";            // 4G模块USB接口地址
 
@@ -77,12 +71,18 @@ public class MQTTService extends Service {
     public static String Ailsedata = null;          // 设备通道信息
     public static String OrderTokenUrl = null;         // 订单tokenUrl
     public static String CreateOrderUrl = null;         // 创建订单Url
+    public static String ModelId = null;                // 远程升级使用
+    public static String SerialNo = null;               // 设备流水号
+    public static String Ser = null;                    // 设备ser
+    public static String DeviceInfo = null;             // 设备信息获取URL
+    public static String CustomerInfoURL = null;           // 企业客户URL
+    public static String EmployeeInfoURL = null;           // 员工信息URL
 
     private final static int QOS = 0;
 
     private Timer timerURL = new Timer();
     private TimerTask timerTaskURL = null;
-    private int countDownTimerURL = 2;
+    private int countDownTimerURL = 5;
     private boolean URL = false;
 
     private Timer timerDevice = new Timer();
@@ -90,6 +90,23 @@ public class MQTTService extends Service {
     private int countDownTimerDevice = 120;
     private boolean Device = false;
     private boolean DeviceNot = false;
+    /**
+     * <p>授权服务获取AccessToken接口.</p>
+     * 后台下发
+     */
+    public static String OAUTH_SERVER_LOGIN_URL = null;
+
+    /**
+     * 客户端ID
+     * 后台下发
+     */
+    public static String CLIENT_ID = null;
+
+    /**
+     * 客户端秘钥
+     * 后台下发
+     */
+    public static String CLIENT_SECRET = null;
 
     @Override
     public void onCreate() {
@@ -122,7 +139,6 @@ public class MQTTService extends Service {
 
     private void init() {
         me = this;
-        String passWord1 = MainService.returnKey();
 //        String clientId1 = MainActivity.returnDeviceId();
 //        Log.d(TAG, "init1: " + clientId1);
         // 服务器地址（协议+地址+端口号）
@@ -313,194 +329,63 @@ public class MQTTService extends Service {
 
     /*接收到数据进行解析*/
     private void data_Analysis(JSONObject jsonObject) {
-        if (jsonObject.getString("com").equals("1")) {
-            if (Versions){
-                writeData(byTestScmVersions());
-                Versions = false;
-                new Handler().postDelayed(() -> MainService.writeData(byTesArray()), 1000);     // 延时询问门锁状态
-            }
+        if (jsonObject.getString("com").equals("5")) {                                      // 清除货道（以设备获取的库存为主下发）
+            String channChan = jsonObject.getString("clearChan");
+            String channNum = jsonObject.getString("clearNum");
+            Ser = jsonObject.getString("ser");
+//            MainService.writeData(SerialDataSend.ByteEmptyAisle(Integer.valueOf(channChan), Integer.valueOf(channNum)));              // Scm 暂时没有
+//            MainActivity.ClearChannl();
         } else if (jsonObject.getString("com").equals("2")) {
-            String dropChanStr = jsonObject.getString("dropchan");
-            arrayDropchan = dropChanStr;
+            arrayDropchan = jsonObject.getString("dropchan");
             Order = jsonObject.getString("order");
+            Ser = jsonObject.getString("ser");
 //            MainInterShopping.TimerBuffCountDown++;
             MainDetailsPage.ShipMentData();
-        } else if (jsonObject.getString("com").equals("24")) {
-            Log.d(TAG, "data_Analysis: " + "改过版本 + 4");
+        } else if (jsonObject.getString("com").equals("3")) {
             URL = true;
             homePage = jsonObject.getString("goods");
-            PriceLink = jsonObject.getString("PriceLink");
-            QRcode = jsonObject.getString("QRcode");
-            id = jsonObject.getString("id");
-            DevId = jsonObject.getString("devId");
             Ailsedata = jsonObject.getString("AisleData");
             OrderTokenUrl = jsonObject.getString("OrderToke");
             CreateOrderUrl = jsonObject.getString("CreateOrder");
-//            MainService.AuthenticationInformation();
-//            AgentClient.init();
-//            Send(com,"at+qccid");
-//            String ICCID = Receive(com);
+            Ser = jsonObject.getString("ser");
+            ModelId = jsonObject.getString("modelId");
+            SerialNo = jsonObject.getString("serialNo");
+            DeviceInfo = jsonObject.getString("DeviceInfo");
+            CustomerInfoURL = jsonObject.getString("customerInfo");
+            EmployeeInfoURL = jsonObject.getString("employeeInfo");
             AppearSimICCID();
             MainActivity.RequestData();
-//            if (Versions){
-//                writeData(byTestScmVersions());
-//                Versions = false;
-//                new Handler().postDelayed(() -> MainService.writeData(byTesArray()), 1000);     // 延时询问门锁状态
-//            }
-        } else if (jsonObject.getString("com").equals("25")) {
-            writeData(byShipMent(jsonObject.getString("chans")));
+        } else if (jsonObject.getString("com").equals("4")) {
+            Ser = jsonObject.getString("ser");
+            OAUTH_SERVER_LOGIN_URL = jsonObject.getString("AuthorServiceToken");
+            CLIENT_ID = jsonObject.getString("clientId");
+            CLIENT_SECRET = jsonObject.getString("secret");
+            MainService.StartTimerToken();
+//            MainService.writeData(SerialDataSend.byTestScmVersions());
         } else if (jsonObject.getString("com").equals("26")) {
-//            Log.d(TAG, "data_Analysis: " + "新版本");
             if (jsonObject.getString("app").equals("scm")){
-                //                    writebyteData(readLocalFile());
-//                writeData(byTestScmBoot());
                 APKupgrade(jsonObject.getString("Scmurl"), "PCU800CAV.bin");
             }else if (jsonObject.getString("app").equals("android")){
                 APKupgrade(jsonObject.getString("Androidurl"), "Microsoft.apk");
             }
-//            else if (jsonObject.getString("app").equals("upgrade")){
-//
-//            }
-        } else if (jsonObject.getString("com").equals("27")){
-            DeviceHardReboot(Integer.valueOf(jsonObject.getString("second")));
-        } else if (jsonObject.getString("com").equals("29")){
-//            Send(com,"at+qccid");
-//            String ICCID = Receive(com);
+        } else if (jsonObject.getString("com").equals("7")){
+            if ("Android".equals(jsonObject.getString("DeviceType"))){
+                DeviceSoftReboot();
+            }else {
+                MainService.writeData(SerialDataSend.byTesArrayReboot());
+            }
+        }else if (jsonObject.getString("com").equals("8")){
+            MainActivity.ReSuccess(jsonObject.getString("addRes"));
+        } else if (jsonObject.getString("com").equals("9")){
             AppearSimICCID();
-
         }
-    }
-
-
-    public static Byte[] ByteInbyte(byte[] data){
-        Byte[] arr = new Byte[data.length];
-        for (int i = 0; i < data.length; i++) {
-            arr[i] = data[i];           // 循环赋值
-        }
-        return arr;
-    }
-
-    /**
-     * @ 串口写数据
-     */
-    public static void writeData(Byte[] data) {
-        byte[] arr = new byte[data.length];
-        for (int i = 0; i < data.length; i++) {
-            arr[i] = data[i];           // 循环赋值
-        }
-        try {
-            Log.d(TAG, "writeData: " + Arrays.toString(arr));
-            MainService.outPut.write(arr);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    /**
-     * @ 构建十六进制数据下发到下位机 （询问从机门锁状态）
-     */
-    public static Byte [] byTesArray (){
-//        chansNum = AnalysisJson(responseData);
-        ArrayList<Byte> dataData = new ArrayList<>();
-        dataData.add((byte) 0xFF);
-        dataData.add((byte) 0x00);
-        dataData.add((byte) 0x0D);
-        dataData.add((byte) 0x01);
-        dataData.add((byte) 0x00);
-        Byte [] data = new Byte[dataData.size()];
-        dataData.toArray(data);         // 复制数据给data
-        Integer crc = MainService.getCRC(data);
-        byte [] danum = MainService.intToDoubleBytes(crc);
-        dataData.add(danum[0]);
-        dataData.add(danum[1]);
-        dataData.add((byte) 0x0D);
-        dataData.add((byte) 0x0A);
-        Byte [] dataArray =  new Byte[dataData.size()];
-        dataData.toArray(dataArray);
-        Log.i(TAG, "Activity byTesArray: -> " + Arrays.toString(dataArray));
-//        logger.info("Activity byTesArray: -> " + Arrays.toString(dataArray));
-        return dataArray;
-    }
-
-    /**
-     * @ 通知Scm进入bootloader模式 进行固件更新
-     * */
-    public static Byte[] byTestScmBoot(){
-        ArrayList<Byte> dataData = new ArrayList<>();
-        dataData.add((byte) 0xFF);
-        dataData.add((byte) 0x00);
-        dataData.add((byte) 0x11);
-        dataData.add((byte) 0x01);
-        dataData.add((byte) 0x00);
-        Byte [] data = new Byte[dataData.size()];
-        dataData.toArray(data);         // 复制数据给data
-        Integer crc = MainService.getCRC(data);
-        byte [] danum = MainService.intToDoubleBytes(crc);
-        dataData.add(danum[0]);
-        dataData.add(danum[1]);
-        dataData.add((byte) 0x0D);
-        dataData.add((byte) 0x0A);
-        Byte [] dataArray =  new Byte[dataData.size()];
-        dataData.toArray(dataArray);
-        Log.i(TAG, "Activity byTesArray: -> " + Arrays.toString(dataArray));
-//        logger.info("Activity byTesArray: -> " + Arrays.toString(dataArray));
-        return dataArray;
-    }
-
-    /**
-     * @ 通知Scm从板固件发送完成
-     * */
-    public static Byte[] byTestScmOver(){
-        ArrayList<Byte> dataData = new ArrayList<>();
-        dataData.add((byte) 0xFF);
-        dataData.add((byte) 0x00);
-        dataData.add((byte) 0x14);
-        dataData.add((byte) 0x01);
-        dataData.add((byte) 0x00);
-        Byte [] data = new Byte[dataData.size()];
-        dataData.toArray(data);         // 复制数据给data
-        Integer crc = MainService.getCRC(data);
-        byte [] danum = MainService.intToDoubleBytes(crc);
-        dataData.add(danum[0]);
-        dataData.add(danum[1]);
-        dataData.add((byte) 0x0D);
-        dataData.add((byte) 0x0A);
-        Byte [] dataArray =  new Byte[dataData.size()];
-        dataData.toArray(dataArray);
-        Log.i(TAG, "Activity byTesArray: -> " + Arrays.toString(dataArray));
-//        logger.info("Activity byTesArray: -> " + Arrays.toString(dataArray));
-        return dataArray;
-    }
-
-    /**
-     * @ 读取SCM固件版本号
-     * */
-    public static Byte[] byTestScmVersions(){
-        ArrayList<Byte> dataData = new ArrayList<>();
-        dataData.add((byte) 0xFF);
-        dataData.add((byte) 0x00);
-        dataData.add((byte) 0x10);
-        dataData.add((byte) 0x01);
-        dataData.add((byte) 0x00);
-        Byte [] data = new Byte[dataData.size()];
-        dataData.toArray(data);         // 复制数据给data
-        Integer crc = MainService.getCRC(data);
-        byte [] danum = MainService.intToDoubleBytes(crc);
-        dataData.add(danum[0]);
-        dataData.add(danum[1]);
-        dataData.add((byte) 0x0D);
-        dataData.add((byte) 0x0A);
-        Byte [] dataArray =  new Byte[dataData.size()];
-        dataData.toArray(dataArray);
-        Log.i(TAG, "Activity byTesArray: -> " + Arrays.toString(dataArray));
-//        logger.info("Activity byTesArray: -> " + Arrays.toString(dataArray));
-        return dataArray;
     }
 
     /**
      * @ SCM 固件更新
      * */
     public static void writeSCM(String SCM){
+        Log.d(TAG, "writeSCM: " + "111111");
         me.writebyteSCMData(SCM);
     }
 
@@ -513,6 +398,7 @@ public class MQTTService extends Service {
     private void writebyteSCMData(String SCM) {
         try {
             byte [] data = readLocalFile();
+            Log.d(TAG, "writebyteSCMData: " + "111");
             int SCMDATASIZE = data.length / 4096;
             if (data.length % 4096 != 0){
                 SCMDATASIZE  += 1;
@@ -524,25 +410,25 @@ public class MQTTService extends Service {
                 if (SCMNum + 1 < SCMDATASIZE){
                     byte[] datanum = new byte[4096];
                     System.arraycopy(data, (SCMNum * 4096), datanum, 0, 4096);
-                    MainService.writeData(byteAdd(datanum, SCMNum));
+                    MainService.writeData(SerialDataSend.byteAdd(datanum, SCMNum));
                     Log.d(TAG, "writeData: " + datanum.length);
                 }else {
                     if (SCMNum + 1 == SCMDATASIZE){
                         byte[] datanum = new byte[data.length - SCMNum*4096];
                         Log.d(TAG, "writebyteSCMData: " + (data.length - SCMNum*4096));
                         System.arraycopy(data, (SCMNum * 4096), datanum, 0, (data.length - SCMNum*4096));
-                        MainService.writeData(byteAdd(datanum, SCMNum));
+                        MainService.writeData(SerialDataSend.byteAdd(datanum, SCMNum));
                         Log.d(TAG, "writeData: " + datanum.length);
                         SCMOver = true;
                     }
                 }
             }else {
-                MainService.writeData(byteAdd(data, SCMNum));
+                MainService.writeData(SerialDataSend.byteAdd(data, SCMNum));
                 SCMOver = true;
             }
             if (SCMOver){
                 if (SCMNum + 1 > SCMDATASIZE){
-                    writeData(byTestScmOver());
+                    MainService.writeData(SerialDataSend.byTestScmOver());
                     SCMOver = false;
                     StartTimerVersions();
                 }
@@ -603,7 +489,7 @@ public class MQTTService extends Service {
             TimerTaskversions = new TimerTask() {
                 @Override
                 public void run() {
-                    writeData(byTestScmVersions());
+                    MainService.writeData(SerialDataSend.byTestScmVersions());
                     StopTimerVersions();
                 }
             };
@@ -673,73 +559,6 @@ public class MQTTService extends Service {
 //        }
 //    }
 
-    /**
-     * @ SCM单片机更新分包添加头尾
-     * */
-    public static Byte[] byteAdd(byte[] data, int num){
-        ArrayList<Byte> dataData = new ArrayList<>();
-        byte byteNum = (byte)(num / 256);
-        byte byteNumONE = (byte)(num % 256);
-        byte byteCode = (byte)(data.length / 256);
-        byte bytecodeONE = (byte)(data.length % 256);
-        Byte[] datanum = new Byte[data.length + 11];
-//        Log.d(TAG, "byteAdd: " + byteCode + " " + bytecodeONE);
-        dataData.add((byte) 0x4B);
-        dataData.add((byte) 0x54);
-        dataData.add(byteNum);
-        dataData.add(byteNumONE);
-        dataData.add(byteCode);
-        dataData.add(bytecodeONE);
-        for (int i = 0; i < data.length; i++){
-            dataData.add(data[i]);
-        }
-        Byte [] DATA = new Byte[dataData.size()];
-        dataData.toArray(DATA);         // 复制数据给data
-        Integer crc = MainService.getCRC(DATA);
-        byte [] danum = MainService.intToDoubleBytes(crc);
-        dataData.add(danum[0]);
-        dataData.add(danum[1]);
-        dataData.add((byte) 0x43);
-        dataData.add((byte) 0x43);
-        dataData.add((byte) 0x44);
-        Byte [] dataArray =  new Byte[dataData.size()];
-//        Log.d(TAG, "byteAdd: " + dataData.size());
-        dataData.toArray(dataArray);
-        for (int i = 0; i < dataArray.length; i++){
-            datanum[i] = dataArray[i];
-        }
-        Log.d(TAG, "byteAdd: " + Arrays.toString(datanum));
-        return datanum;
-    }
-
-    /**
-     * 打包串口需要下发的出货数据
-     */
-    private Byte[] byShipMent(String chans) {
-        if (chans.length() == 1) {
-            chans = "0" + chans;
-        }
-        ArrayList<Byte> shipMent = new ArrayList<>();
-        shipMent.add((byte) 0xFF);
-        shipMent.add((byte) 0x00);
-        shipMent.add((byte) 0x0A);
-        shipMent.add((byte) 0x01);
-        shipMent.add((byte) (Integer.parseInt(chans)));
-        Byte[] data = new Byte[shipMent.size()];
-        shipMent.toArray(data);         // 复制数据给data
-        Integer crc = MainActivity.getCRC(data);
-        byte[] danum = MainActivity.intToDoubleBytes(crc);
-        shipMent.add(danum[0]);
-        shipMent.add(danum[1]);
-        shipMent.add((byte) 0x0D);
-        shipMent.add((byte) 0x0A);
-        Byte[] dataArray = new Byte[shipMent.size()];
-        shipMent.toArray(dataArray);
-        Log.i(TAG, "Shipment byShipMent: -> " + Arrays.toString(dataArray));
-//        logger.info("Shipment byShipMent: -> " + Arrays.toString(dataArray));
-        return dataArray;
-    }
-
 
     /**
      * @ 下载apk && SCM 固件更新
@@ -755,7 +574,7 @@ public class MQTTService extends Service {
                 String Url = Path() + "/" + name;
                 Log.d(TAG, "onDownloadSuccess: " + Url);
                 if (name.equals("PCU800CAV.bin")){
-                    writeData(byTestScmBoot());                 // SCM 远程升级
+                    MainService.writeData(SerialDataSend.byTestScmBoot());                 // SCM 远程升级
 
                 }else {
                     MainService.APK(Url);                       // APK 远程升级
@@ -787,9 +606,33 @@ public class MQTTService extends Service {
         return path;
     }
 
+    public static String returnModelId() {
+        return ModelId;
+    }
+
+    /**
+     * @ 返回设备流水号
+     */
+    public static String returnSerialNo() {
+        return SerialNo;
+    }
+
+    /**
+     * @ 返回Ser
+     */
+    public static String returnSer() {
+        return Ser;
+    }
+
+    /**
+     * @ 返回Ser
+     */
+    public static String returnDeviceInfo() {
+        return DeviceInfo;
+    }
+
 
     public static String returnArrayDropchan() {
-//        Log.d(TAG, "returnArrayDropchan: " + arrayDropchan);
         return arrayDropchan;
     }
 
@@ -806,12 +649,26 @@ public class MQTTService extends Service {
     }
 
     /**
-     * @ 返回订单token
+     * @ 返回订单tokenURl
      */
     public static String returnOrderTokenUrl() {
         return OrderTokenUrl;
     }
 
+
+    /**
+     * @ 返回企业用户URL
+     */
+    public static String returnCustomerInfo() {
+        return CustomerInfoURL;
+    }
+
+    /**
+     * @ 返回员工信息URL
+     */
+    public static String returnEmployeeInfo() {
+        return EmployeeInfoURL;
+    }
     /**
      * @ 返回设备ID
      */
@@ -861,6 +718,27 @@ public class MQTTService extends Service {
         return DevId;
     }
 
+    /**
+     * @ 返回客户端ID
+     */
+    public static String returnclientId() {
+        return CLIENT_ID;
+    }
+
+    /**
+     * @ 客户端秘钥
+     */
+    public static String returnSecret() {
+        return CLIENT_SECRET;
+    }
+
+    /**
+     * @ 授权服务获取AccessToken接口
+     */
+    public static String returnAuthorServiceToken() {
+        return OAUTH_SERVER_LOGIN_URL;
+    }
+
 
     /**
      * @ 设备上线通知
@@ -876,9 +754,12 @@ public class MQTTService extends Service {
                 public void run() {
                     if (countDownTimerURL > 0) {
                         countDownTimerURL--;
+                        if (countDownTimerURL == 4){
+                            BackendData.AppearDealVersion();
+                        }
                     } else {             // 一分钟之后判断是否下发URL
                         if (!URL) {
-                            AppearDataUrl();
+                            BackendData.AppearDataUrl();
                             stopTimerURL();
                         }
                     }
@@ -969,81 +850,12 @@ public class MQTTService extends Service {
         try {
             TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(TELEPHONY_SERVICE);
             assert telephonyManager != null;
-//            Log.d(TAG, "getIMEI: " + telephonyManager.getLine1Number());
-            Log.d(TAG, "getIMSI: " + telephonyManager.getSubscriberId());
-//            SubscriptionManager sm = SubscriptionManager.from(context);
-//            List sis = sm.getActiveSubscriptionInfoList();
-//            SubscriptionInfo si = (SubscriptionInfo) sis.get(0);
-//            String iccId = si.getIccId();
+//            Log.d(TAG, "getIMSI: " + telephonyManager.getSubscriberId());
             return telephonyManager.getSubscriberId();
-//            String iccid2 = null;
-//            TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-//            try { Method method = tm.getClass().getDeclaredMethod("getSubscriberInfo");
-//                try { method.setAccessible(true);
-//                    Object obj = method.invoke(tm);
-//                    Method method2 = obj.getClass().getDeclaredMethod("getPhone",int.class);
-//                    method2.setAccessible(true);
-//                    Object obj2 = method2.invoke(obj,0);
-//                    Method method3 = obj2.getClass().getMethod("getFullIccSerialNumber");
-//                    iccid2 = (String) method3.invoke(obj2);
-//                } catch (IllegalAccessException e) {
-//                    e.printStackTrace();
-//                } catch (InvocationTargetException e) {
-//                    e.printStackTrace();
-//                } } catch (NoSuchMethodException e) {
-//                e.printStackTrace();
-//            }
-//            Log.d(TAG, "getIMEI: " + iccid2);
-//            return iccid2;
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
-    }
-
-
-    /**
-     * @ 通过AT指令获取SIMICCID（接收）
-     * */
-    private String Receive(String file) {
-        RandomAccessFile localRandomAccessFile = null;
-        try {
-            localRandomAccessFile = new RandomAccessFile(file, "r");
-            byte[] arrayOfByte = new byte[1024];
-            int readSize = 0;
-            while ((readSize = localRandomAccessFile.read(arrayOfByte)) == -1) {
-
-            }
-            String response = new String(arrayOfByte).substring(0, readSize);
-            Log.d(TAG, "Receive: " + response);
-//            LogUtils.e("re:"+response);
-            response = replaceBlank(response.substring(10));
-            Log.d(TAG, "Receive: " + response);
-//            localRandomAccessFile.close();
-            return response;
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    /**
-     * @ 通过AT指令获取SIMICCID（发送）
-     * */
-    void Send(String file, String cmd){
-        RandomAccessFile localRandomAccessFile = null;
-        try {
-            localRandomAccessFile = new RandomAccessFile(file, "rw");
-            localRandomAccessFile.writeBytes(cmd + "\r\n");
-            localRandomAccessFile.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
     }
 
     /**
@@ -1064,32 +876,17 @@ public class MQTTService extends Service {
      * */
     private void AppearSimICCID(){
         JSONObject value = new JSONObject();
-        value.put("com", "29");
-        value.put("devId", MQTTService.returnDevId());
+        value.put("com", "9");
+        value.put("ser", MQTTService.returnSer());
         if (getICCID(this) == null){
             value.put("simimsi", "");
-//            Log.d(TAG, "AppearSimICCID: " + "111111");
         }else {
-//            Log.d(TAG, "AppearSimICCID: " + "222222");
+            Log.d(TAG, "AppearSimICCID: " + getICCID(this));
             value.put("simimsi", getICCID(this));
         }
         String str = JSONUtils.createCommandJSONString(MQTTService.SENSORICCID, value);
         Log.i(TAG, "Activity upload_Data: -> " + str);
-//        logger.info("Activity upload_Data: -> " + str);
         MQTTService.publish("$dp", str);
-    }
-
-
-    /**
-     * @ 主动上报上线通知
-     */
-    private void AppearDataUrl() {
-        JSONObject value = new JSONObject();
-        value.put("com", "24");
-        value.put("set", "");
-        String string = JSONUtils.createCommandJSONString(SENSORURL, value);
-        Log.i(TAG, "Activity upload_Data: -> " + string);
-        MQTTService.publish("$dp", string);
     }
 
     /**
@@ -1106,7 +903,6 @@ public class MQTTService extends Service {
         String ScmversionCode = HexadecimalToDecimal(str);
         JSONObject value = new JSONObject();
         value.put("com", "26");
-        value.put("devId", MQTTService.returnDevId());
         value.put("AndroidVersionCode", String.valueOf(MainService.packageCode(this)));
         value.put("AndroidVersionName", MainService.packageName(this));
         value.put("ScmVersion", ScmversionCode);
@@ -1118,7 +914,7 @@ public class MQTTService extends Service {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        MainService.writeData(MQTTService.byTesArray());
+        MainService.writeData(SerialDataSend.byTesArray());
     }
 
     /**
@@ -1149,11 +945,9 @@ public class MQTTService extends Service {
 //        String path = lztek.getStorageCardPath();   // 获取SD卡路径+
         String fileName = path + "/PCU800CAV.bin";
         InputStream inputStream = new FileInputStream(fileName);
-//        Log.d(TAG, "readLocalFile: " + inputStream);
         byte[] data = toByteArray(inputStream);
         inputStream.close();
-//        Log.d(TAG, "readLocalFile: " + data.length);
-
+        Log.d(TAG, "readLocalFile: " + data.length);
         return data;
     }
     private byte[] toByteArray(InputStream in) throws IOException {

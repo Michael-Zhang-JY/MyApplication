@@ -55,6 +55,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import okhttp3.Call;
+import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class MainInterFace extends AppCompatActivity implements View.OnClickListener {
@@ -74,7 +75,7 @@ public class MainInterFace extends AppCompatActivity implements View.OnClickList
     protected List<Details> detAils;
     private static ArrayList<String> GroupGoodId = new ArrayList<>();
     public static Integer PriceSign = 0;
-    private String endTime;
+    public String endTime;
     private Timer timer = null;
     private Timer timerCountDown = new Timer();
     private Timer timerAnimation = new Timer();
@@ -178,7 +179,7 @@ public class MainInterFace extends AppCompatActivity implements View.OnClickList
             Popup("设备异常,请重试/Equipment is abnormal. Please try again");
         } else {
 //            Log.d(TAG, "init: " + string.length());
-            Log.d(TAG, "init:" + string);
+//            Log.d(TAG, "init:" + string);
 //            logger.debug("Interface init: -> " + string);
 //            ProductData(string);        // 解析商品数据
             ProductDataNews(string);
@@ -210,10 +211,12 @@ public class MainInterFace extends AppCompatActivity implements View.OnClickList
     public static CafewalkToken cafewalkToken = null;
     public static String Token = null;
 
-    private void CafewalkTokenOne(){
+    public static void CafewalkTokenOne(){
+        MainService.BooleanReComm = true;
         String Url = MQTTService.returnOrderTokenUrl();
         Log.d(TAG, "CafewalkTokenOne: " + "请求订单Token");
-        OkHttpPost.sendOkHttpRequestNull(Url, new okhttp3.Callback() {
+        String Authorization = MainService.ReturnTokenType() + " " + MainService.ReturnAccessToken();
+        OkHttpPost.post(Url, Authorization, RequestBody.create(null, ""), new okhttp3.Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
 
@@ -221,11 +224,21 @@ public class MainInterFace extends AppCompatActivity implements View.OnClickList
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
+                if (response.body() == null){
+                    CafewalkTokenOne();
+                }
+                assert response.body() != null;
+                String string = response.body().string();
+                Log.d(TAG, "onResponse: CafewalkTokenOne ->" + string);
                 if (response.code() >= 200 && response.code() < 300){
                     Gson gson = new Gson();
-                    cafewalkToken = gson.fromJson(response.body().string(), CafewalkToken.class);
+                    cafewalkToken = gson.fromJson(string, CafewalkToken.class);
                     Token = cafewalkToken.getContent();
-                    Log.d(TAG, "onResponse: " + cafewalkToken);
+                    MainService.BooleanReComm = false;
+                }else if (response.code() == 403){
+//                    MainService.StopTimerToken();
+//                    MainService.TokenRefresh();
+                    MainService.TimerClose();
                 }
             }
         });
@@ -591,8 +604,6 @@ public class MainInterFace extends AppCompatActivity implements View.OnClickList
             Log.d(TAG, "onActivityResult: " + "111111");
             CafewalkTokenOne();
         }
-        Log.d(TAG, "onActivityResult: " + requestCode);
-        Log.d(TAG, "onActivityResult: " + "222222");
         countDownTimeOne = 15;
         startTimer();
         startautoBannerTimer();
@@ -1017,7 +1028,7 @@ public class MainInterFace extends AppCompatActivity implements View.OnClickList
     private void ProductDataNews(String string){
         Gson gson = new Gson();
         List<KeyValuePairNews> keyValuePairNews = gson.fromJson(string, new TypeToken<List<KeyValuePairNews>>(){}.getType());
-        Log.d(TAG, "ProductDataNews: " + keyValuePairNews.toString());
+//        Log.d(TAG, "ProductDataNews: " + keyValuePairNews.toString());
         AisleNumber(keyValuePairNews);
     }
 
@@ -1241,7 +1252,7 @@ public class MainInterFace extends AppCompatActivity implements View.OnClickList
 //                    + pair.getStringUrl());
 //        }
         recyCler();
-        Log.i(TAG, "Interface AisleNumber: -> " + keyValuePairs.toString());
+//        Log.i(TAG, "Interface AisleNumber: -> " + keyValuePairs.toString());
 //        logger.info("Interface AisleNumber: -> " + keyValuePairs.toString());
     }
 

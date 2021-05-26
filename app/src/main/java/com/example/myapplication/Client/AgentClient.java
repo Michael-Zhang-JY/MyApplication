@@ -15,7 +15,6 @@ import java.time.LocalDateTime;
 import java.util.Date;
 
 import okhttp3.Call;
-import okhttp3.Credentials;
 import okhttp3.HttpUrl;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
@@ -82,6 +81,7 @@ public class AgentClient {
         String deviceChanInfoUrl = "https://api.dev.cafewalk.com/store-service/store/channel/{0}";
         Long storeId = 72L;
         String url = MessageFormat.format(deviceChanInfoUrl, storeId);
+        System.out.println("Url - > " + url);
         AgentClient.init();
         try {
             //客户端初始化
@@ -139,6 +139,7 @@ public class AgentClient {
                 .post(RequestBody.create(MediaType.parse("application/json;charset=utf-8"), body));
         preHandle(builder);
         Request request = builder.build();
+        System.out.println("request - > " + request.toString());
         System.out.println(url + " " + body);
         return AgentClient.getClient().newCall(request).execute();
     }
@@ -178,10 +179,10 @@ public class AgentClient {
                 OkHttpClient.Builder builder = OkHttpUtils.initBuilder(60L, 60L, 120L,
                         3, 10, 20);
                 //创建用来获取Token的客户端(如果ClientID和ClientSecret变更了，需要重新生成当前客户端)
-                AgentClient.tokenClient = builder.authenticator((route, response) -> {
-                    String credential = Credentials.basic(CLIENT_ID, CLIENT_SECRET);
-                    return response.request().newBuilder().header("Authorization", credential).build();
-                }).build();
+//                AgentClient.tokenClient = builder.authenticator((route, response) -> {
+//                    String credential = Credentials.basic(CLIENT_ID, CLIENT_SECRET);
+//                    return response.request().newBuilder().header("Authorization", credential).build();
+//                }).build();
                 //刷新AccessToken
                 refreshToken();
             }

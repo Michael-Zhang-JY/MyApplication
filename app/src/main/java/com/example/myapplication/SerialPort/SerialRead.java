@@ -7,6 +7,7 @@ import com.example.myapplication.MQTT.MQTTService;
 import com.example.myapplication.MainActivity;
 import com.example.myapplication.MainDetailsPage;
 import com.example.myapplication.MainService;
+import com.example.myapplication.OneNetData.BackendData;
 
 import java.io.IOException;
 
@@ -31,6 +32,7 @@ public class SerialRead extends Thread {
             if (MainService.inPut == null) {
                 return;
             }
+//            Log.d(TAG, "run: " + "111111");
             byte[] readData = new byte[512];
             try  {
                 Thread.sleep(10);
@@ -41,15 +43,15 @@ public class SerialRead extends Thread {
                         buffer.append(readString);
                         Log.d(TAG, "read: bufferone ->" + buffer);
                         if (buffer.toString().startsWith("FF") && buffer.toString().endsWith("0D0A")){    // 判断首次出现与最后出现的字符串
-                            Log.d(TAG, "read: buffer -> " + buffer);
+//                            Log.d(TAG, "read: buffer -> " + buffer);
                             String string =buffer.substring(0, buffer.length());
 //                            Log.d(TAG, "run: " + string.substring(4, 6));
 //                            Log.d(TAG, "run: " + (AnalysisChans(string.substring(7, 8)) + 15) +  " " + string.length());
-                            if (string.substring(4, 6).equals("A1")){                       // 设定通道数量
-                                MainActivity.upload_Data(string.substring(6, 8));
+                            if (string.substring(4, 6).equals("A9")){                       // 清空货道
 //                                Log.d(TAG, "run: " + string.substring(6, 8));
+                                BackendData.EmptyAisle(readString);
                             }else if (string.substring(4, 6).equals("A2")){
-                                MainDetailsPage.uploadShipMentData(string);               // 上报每条出货数据到Onenet
+                                BackendData.uploadShipMentData(string);               // 上报每条出货数据到Onenet
                                 MainDetailsPage.ALterRecyclerCall(string);                // 实时修改出货状态
                             }else if (string.substring(4, 6).equals("EE") && string.substring(6, 8).equals("E4")){
 //                                MainInterShipment.EleRecyclerCall();
@@ -65,21 +67,21 @@ public class SerialRead extends Thread {
                             }else if (string.substring(4, 6).equals("AD")){             // 设备主机主动询问门锁状态
                                 MainActivity.BFB(string.substring(9, 10));
                             }else if (string.substring(4, 6).equals("0E")){             // 设备主机上报从机补货数据
-                                MainService.MendChans(string.substring(9, 10));
+                                BackendData.MendChans(string.substring(9, 10));
 //                                MainService.DeviceIdInven(string.substring(9, 10));
                             }else if (string.substring(4, 6).equals("13")){             // 从板请求固件数据包
+                                Log.d(TAG, "run: " + "1111111");
                                 MQTTService.writeSCM(string.substring(8, 10));
                             }else if (string.substring(4, 6).equals("B0")){             // 设备主机询问从机固件版本号
                                 MQTTService.AppVersion(string.substring(8, 12));
                             }
-
 //                            Log.d(TAG, "run: " + string.substring(6, 8));
                             buffer = new StringBuffer();
                         } else if (buffer.length() > 36){                   // 黏包处理
                             String string = buffer.substring(0, buffer.length());
-                            string = string.substring(string.indexOf("FF00"), string.indexOf("0D0A") + 4);
+                            string = string.substring(string.indexOf("FF"), string.indexOf("0D0A") + 4);
                             Log.d(TAG, "read: buffer ->: Two " + string);
-                            MainDetailsPage.uploadShipMentData(string);               // 上报每条出货数据到Onenet
+                            BackendData.uploadShipMentData(string);               // 上报每条出货数据到Onenet
                             MainDetailsPage.ALterRecyclerCall(string);                // 实时修改出货状态
                             buffer = new StringBuffer();
                         }
@@ -91,30 +93,4 @@ public class SerialRead extends Thread {
             }
         }
     }
-
-    public static int AnalysisChans(String data){
-        int string = Integer.valueOf(data);
-        switch (data){
-            case "A":
-                string = 10;
-                break;
-            case "B":
-                string = 11;
-                break;
-            case "C":
-                string = 12;
-                break;
-            case "D":
-                string = 13;
-                break;
-            case "E":
-                string = 14;
-                break;
-            case "F":
-                string = 15;
-                break;
-        }
-        return string;
-    }
-
 }

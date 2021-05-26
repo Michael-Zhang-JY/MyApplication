@@ -24,6 +24,28 @@ public class OkHttpUtil {
         client.newCall(request).enqueue(callback);
     }
 
+    public static void sendOkHttpRequestToken(String address,String header, okhttp3.Callback callback){
+        OkHttpClient client = getUnsafeOkHttpClient().newBuilder().readTimeout(20, TimeUnit.SECONDS).build();
+        Request request = new Request.Builder()
+                .url(address)
+                .addHeader("token", header)
+                .build();
+        client.newCall(request).enqueue(callback);
+    }
+
+    /**
+     * @ 同步Get请求
+     * */
+    public static Response sendOkHttpRequestTokenSys(String address,String header) throws IOException {
+        OkHttpClient client = getUnsafeOkHttpClient().newBuilder().readTimeout(20, TimeUnit.SECONDS).build();
+        Request request = new Request.Builder()
+                .url(address)
+                .header("Authorization", header)
+                .build();
+        return client.newCall(request).execute();
+    }
+
+
     public static Response sendOkHttpRequestNoAsync(String address) throws IOException {
         OkHttpClient client = getUnsafeOkHttpClient().newBuilder().readTimeout(20, TimeUnit.SECONDS).build();
         Request request = new Request.Builder()

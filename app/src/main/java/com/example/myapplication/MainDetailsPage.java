@@ -1,39 +1,32 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
 import com.example.myapplication.ArrayListKey.DetailsPage;
-import com.example.myapplication.Cafewalk.CafewalkToken;
 import com.example.myapplication.FontIconView.FontIconView;
-import com.example.myapplication.FontIconView.XRTextView;
-import com.example.myapplication.MQTT.JSONUtils;
 import com.example.myapplication.MQTT.MQTTService;
 import com.example.myapplication.OkHttpUtil.OkHttpPost;
-import com.example.myapplication.OkHttpUtil.OkHttpUtil;
-import com.example.myapplication.RecycleView.PersonAdapter;
+import com.example.myapplication.SerialPort.SerialDataSend;
 import com.google.gson.Gson;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Objects;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -68,7 +61,7 @@ public class MainDetailsPage extends AppCompatActivity implements View.OnClickLi
 
     public static int chansNum = 0;
 
-    private DetailsPage detailsPage;
+    public static DetailsPage detailsPage;
     private Gson gson = new Gson();
 
     private Timer timer = new Timer();
@@ -134,31 +127,6 @@ public class MainDetailsPage extends AppCompatActivity implements View.OnClickLi
 //        CafewalkTokenOne();
     }
 
-    private CafewalkToken cafewalkToken = null;
-    private String Token = null;
-
-    private void CafewalkTokenOne(){
-        String Url = "https://test.cafewalk.com/api/order/token";
-        Log.d(TAG, "CafewalkTokenOne: " + "请求订单Token");
-        OkHttpUtil.sendOkHttpRequest(Url, new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-                CafewalkTokenOne();
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                if (response.code() >= 200 && response.code() < 300){
-                    Gson gson = new Gson();
-                    cafewalkToken = gson.fromJson(response.body().string(), CafewalkToken.class);
-                    Token = cafewalkToken.getContent();
-                    runOnUiThread(()->buttonPlay.setClickable(true));
-                    Log.d(TAG, "onResponse: " + cafewalkToken);
-                }
-            }
-        });
-    }
-
     /**
      * @ 无数据显示弹窗返回主界面
      * */
@@ -199,8 +167,6 @@ public class MainDetailsPage extends AppCompatActivity implements View.OnClickLi
         handler.sendMessage(message);
         MainInterFace.destoryActivity("SubmitTaskResultActivity");   // 支付成功关闭购买界面
         MainInterFace.returnKeyValuePair().clear();
-//        keyValuePairs.clear();
-//        adapter.notifyDataSetChanged();
     }
 
 
@@ -208,7 +174,7 @@ public class MainDetailsPage extends AppCompatActivity implements View.OnClickLi
      * @ 界面UI赋值
      * */
     @SuppressLint("HandlerLeak")
-    private Handler handlerView = new Handler(){
+    private Handler handlerView = new Handler(Looper.getMainLooper()){
         @SuppressLint({"ResourceAsColor", "ResourceType", "SetTextI18n"})
         public void handleMessage(Message msg){
             chansNum = detailsPage.getChans();
@@ -242,26 +208,18 @@ public class MainDetailsPage extends AppCompatActivity implements View.OnClickLi
                 }
                 break;
             case R.id.buttonPlay:
-//                countDowntimer = 30;
-//                fontIconViewStop.setVisibility(View.GONE);
-//                textViewShipMentOne.setText("正在出货 Processing");
-//                progressBar.setVisibility(View.VISIBLE);
-//                buttonPlay.setClickable(false);
-//                buttonReturn.setClickable(false);
-//                CafewalkOrder();
-////                writeData(byShipMent());
-//                break;
+
         }
     }
 
 
-    private void CafewalkOrder(){
-        String Url = MQTTService.returnCreateOrderUrl() + MQTTService.returnDevId();
+    public static void CafewalkOrder(){
+        MainService.BooleanEsta = true;
+        String Url = MQTTService.returnCreateOrderUrl();
         RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), CafewalkJson());
-        Log.d(TAG, "CafewalkOrder: " + Url);
-//        Log.d(TAG, "CafewalkOrder: " + CafewalkJson());
-        Log.d(TAG, "CafewalkOrder: " + "创建订单");
-        OkHttpPost.sendOkHttpRequest(Url, requestBody, new Callback() {
+        String Authorization = MainService.ReturnTokenType() + " " + MainService.ReturnAccessToken();
+        Log.d(TAG, "CafewalkOrder: ->" + "创建订单");
+        OkHttpPost.post(Url, Authorization, requestBody, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
                 CafewalkOrder();
@@ -269,24 +227,35 @@ public class MainDetailsPage extends AppCompatActivity implements View.OnClickLi
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
+                if (response.body() == null){
+                    CafewalkOrder();
+                }
+                assert response.body() != null;
+                String string = response.body().string();
+                Log.d(TAG, "onResponse: CafewalkOrder -> " + string);
                 if (response.code() >= 200 && response.code() < 300){
-                    assert response.body() != null;
-                    Log.d(TAG, "onResponse: order" + response.body().string());
-//                    StartShipMent();
+                    MainService.BooleanEsta = false;
+                }else if (response.code() == 403){
+                    MainService.TimerClose();
+                }else if (response.code() == 932){
+                    MainService.BooleanEsta = false;
+                    MainInterFace.Token = null;
+                    MainInterFace.CafewalkTokenOne();
+                    StartShipMent();
                 }
             }
         });
     }
 
     public static void ShipMentData(){
-        MainService.writeData(byShipMent());
+        MainService.writeData(SerialDataSend.byShipMent());
         MQTTService.arrayDropchan = null;
     }
 
-    private Timer timerShipMent = null;
-    private TimerTask timerTaskShipMent = null;
+    private static Timer timerShipMent = null;
+    private static TimerTask timerTaskShipMent = null;
 
-    private void StartShipMent(){
+    private static void StartShipMent(){
         if (timerShipMent == null){
             timerShipMent = new Timer();
         }
@@ -297,7 +266,7 @@ public class MainDetailsPage extends AppCompatActivity implements View.OnClickLi
                     if (MainInterFace.ReturnToken() != null){
                         CafewalkOrder();
                         StopShipMent();
-                        MainInterFace.Token = null;
+//                        MainInterFace.Token = null;
                     }
                 }
             };
@@ -305,7 +274,7 @@ public class MainDetailsPage extends AppCompatActivity implements View.OnClickLi
         timerShipMent.schedule(timerTaskShipMent, 0, 100);
     }
 
-    private void StopShipMent(){
+    private static void StopShipMent(){
         if (timerShipMent != null){
             timerShipMent.cancel();
             timerShipMent = null;
@@ -314,10 +283,10 @@ public class MainDetailsPage extends AppCompatActivity implements View.OnClickLi
             timerTaskShipMent.cancel();
             timerTaskShipMent = null;
         }
-        Log.d(TAG, "StopShipMent: " + "11111111");
     }
 
-    private String CafewalkJson(){
+
+    public static String CafewalkJson(){
         JSONObject jsonObject = new JSONObject();
         JSONObject jsonObjectDescripTion = new JSONObject();
         jsonObjectDescripTion.put("Alias", MainService.ReturnCardName());
@@ -332,107 +301,12 @@ public class MainDetailsPage extends AppCompatActivity implements View.OnClickLi
         jsonArray.add(jsonObjectItem);
         jsonObject.put("items", jsonArray);
         jsonObject.put("payType", 1);
-        jsonObject.put("storeId", MQTTService.returnDevId());
+        jsonObject.put("serialNo", MQTTService.returnSerialNo());
         jsonObject.put("token", MainInterFace.ReturnToken());
         jsonObject.put("tradeType", 1);
-        jsonObject.put("userId", "");
+        jsonObject.put("userId",  MainService.ReturnCardCafe());
         Log.d(TAG, "CafewalkJson: " + jsonObject.toString());
         return jsonObject.toString();
-    }
-
-    /**
-     * @ 库存不足弹窗显示
-     */
-    private void showInventoryDialog(String string) {
-        AlertDialog alertDialog = new AlertDialog.Builder(MainDetailsPage.this, R.style.dialog).create();
-        alertDialog.setTitle(string);
-        alertDialog.show();
-        new Handler().postDelayed(alertDialog::dismiss, 1000);
-    }
-
-    /**
-     * @ 商品数量无法添加弹窗
-     * */
-    private void showOneDialog(){
-        AlertDialog alertDialog = new AlertDialog.Builder(MainDetailsPage.this, R.style.dialog).create();
-        alertDialog.setTitle("商品数已达到最大出货量，无法添加");
-        alertDialog.show();
-        new Handler().postDelayed(alertDialog::dismiss, 1000);
-    }
-
-    /**
-     * @ 串口写数据
-     * */
-    public static void writeData (Byte [] data){
-        byte[] arr = new byte[data.length];
-        for (int i = 0; i < data.length; i++) {
-            arr[i] = data[i];           // 循环赋值
-        }
-        try {
-            Log.d(TAG, "writeData: " + Arrays.toString(arr));
-            MainService.outPut.write(arr);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    /**
-     * 打包串口需要下发的出货数据
-     * */
-    private static Byte [] byShipMent (){
-        MainService.orderCode ++;
-        if (MainService.orderCode == 10){
-            MainService.orderCode ++;
-        }
-        if (MainService.orderCode == 65535){
-            MainService.orderCode = 0;
-        }
-        byte byteCode = (byte)(MainService.orderCode / 256);
-        byte bytecodeONE = (byte)(MainService.orderCode % 256);
-//        OrderCode = byteCode;
-        ArrayList<Byte> shipMent = new ArrayList<>();
-        shipMent.add((byte) 0xFF);
-        shipMent.add((byte) 0x00);
-        shipMent.add((byte) 0x02);
-        shipMent.add((byte) ((byte) stringByte().length + 2));
-        shipMent.add(byteCode);
-        shipMent.add(bytecodeONE);
-        for (int i = 0; i < stringByte().length; i++){
-            shipMent.add(stringByte()[i]);          // 循环赋值后台下发的出货数据
-        }
-        Byte [] data = new Byte[shipMent.size()];
-        shipMent.toArray(data);         // 复制数据给data
-        Integer crc = MainActivity.getCRC(data);
-        byte [] danum = MainActivity.intToDoubleBytes(crc);
-        shipMent.add(danum[0]);
-        shipMent.add(danum[1]);
-        shipMent.add((byte) 0x0D);
-        shipMent.add((byte) 0x0A);
-        Byte [] dataArray =  new Byte[shipMent.size()];
-        shipMent.toArray(dataArray);
-        Log.i(TAG, "Shipment byShipMent: -> " + Arrays.toString(dataArray));
-//        logger.info("Shipment byShipMent: -> " + Arrays.toString(dataArray));
-        return dataArray;
-    }
-
-    /**
-     * @ 赋值后台下发的出货通道
-     * */
-    public static byte [] stringByte (){
-        String dropchan = MQTTService.returnArrayDropchan();
-        Log.d(TAG, "stringByte: " + dropchan);
-        String[] split = dropchan.split("");
-        byte[] bytes = new byte[split.length - 1];
-        for (int i = 1 ; i < split.length; i++) {
-//            if (i == chansNum){
-//                Log.d(TAG, "stringByte: " + chansNum);
-//                bytes[i - 1] = (byte) 1;
-//            }else {
-                bytes[i - 1] = (byte) Integer.parseInt(split[i]);
-//            }
-        }
-        Log.d(TAG, "stringByte: " + Arrays.toString(bytes));
-        return bytes;
     }
 
     /**
@@ -447,7 +321,8 @@ public class MainDetailsPage extends AppCompatActivity implements View.OnClickLi
      * */
     @SuppressLint("SetTextI18n")
     private void AlterRecycler(String data){
-        String infresult = data.substring(12 + MainService.returnChansNum() * 2 + 3, 12 + (MainService.returnChansNum() * 2 + 4));
+        String infresult = data.substring(12 + SerialDataSend.returnChansNum() * 2 + 3, 12 + (SerialDataSend.returnChansNum() * 2 + 4));
+//        Log.d(TAG, "AlterRecycler: " + infresult);
         if (infresult.equals("0")){
             runOnUiThread(() -> progressBar.setVisibility(View.GONE));
             runOnUiThread(() -> textViewShipMentOne.setTextColor(this.getResources().getColor(R.color.colorPrimary)));
@@ -466,24 +341,6 @@ public class MainDetailsPage extends AppCompatActivity implements View.OnClickLi
         runOnUiThread(()->buttonReturn.setVisibility(View.VISIBLE));
     }
 
-    public static void uploadShipMentData(String data){
-//        String string = data.substring(10 + MainActivity.returnChansNum() * 2 + 1, 10 + MainActivity.returnChansNum()* 2 + 2);
-//        if (data.substring(10 + MainActivity.returnChansNum() * 2 + 1, 10 + MainActivity.returnChansNum()* 2 + 2).equals("A")){
-//            string = "10";
-//        }3
-        JSONObject jsonObject = new JSONObject();
-        jsonObject.put("com", "2");
-        jsonObject.put("devId", MQTTService.returnDevId());
-        jsonObject.put("order", MQTTService.returnOrder());
-        jsonObject.put("ser", MQTTService.returnJsonoBject().getString("ser"));
-        jsonObject.put("chan", data.substring(12 + MainService.returnChansNum() * 2 + 1, 12 + MainService.returnChansNum()* 2 + 2));   // 固定10位 + n * 2 + 1 || n * 2 + 2
-        jsonObject.put("infresult", data.substring(12 + MainService.returnChansNum() * 2 + 3, 12 + (MainService.returnChansNum() * 2 + 4)));           //8 位 + n * 2 + 3 || n * 2 + 4
-        String str = JSONUtils.createCommandJSONString(MQTTService.SENSORIDTHREE, jsonObject);
-        Log.d(TAG, "uploadShipMentData: " + str + " " + MQTTService.returnOrder());
-        MQTTService.publish("$dp", str);
-    }
-
-
     /**
      * @ 定时器
      * */
@@ -494,10 +351,8 @@ public class MainDetailsPage extends AppCompatActivity implements View.OnClickLi
                 countDowntimer --;
                 Log.d(TAG, "run: " + countDowntimer);
             }else {
-                Log.d(TAG, "run: " + "MainDeta1111");
                 MainInterFace.destoryActivity("SubmitTaskResultActivity");   // 支付成功关闭购买界面
                 MainInterFace.returnKeyValuePair().clear();
-//                stopTimer();
                 Message message = new Message();
                 handler.sendMessage(message);
             }
@@ -509,7 +364,7 @@ public class MainDetailsPage extends AppCompatActivity implements View.OnClickLi
      * @ Handler回调
      * */
     @SuppressLint("HandlerLeak")
-    private Handler handler = new Handler(){
+    private Handler handler = new Handler(Looper.getMainLooper()){
         public void handleMessage(Message msg){
             super.handleMessage(msg);
 //            Intent intent = new Intent();
